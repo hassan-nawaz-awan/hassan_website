@@ -30,6 +30,24 @@ export default function Conferences() {
               <p className="mt-2 text-sm text-ink-muted dark:text-ink-muted-dark">
                 {conf.description}
               </p>
+
+              {conf.images && conf.images.length > 0 && (
+                <div className="mt-4 grid grid-cols-3 gap-2">
+                  {conf.images.slice(0, 6).map((src, idx) => (
+                    <div
+                      key={idx}
+                      className="aspect-square overflow-hidden rounded-sm border border-hairline dark:border-hairline-dark"
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={src}
+                        alt={`${conf.name} photo ${idx + 1}`}
+                        className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>

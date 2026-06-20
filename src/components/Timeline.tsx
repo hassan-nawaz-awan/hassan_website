@@ -44,22 +44,37 @@ export default function Timeline() {
                     }`}
                   />
 
-                  <p className="font-mono text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark">
-                    {item.period} · {statusLabel[item.status]}
-                  </p>
-                  <h3 className="mt-1.5 font-display text-xl text-ink dark:text-ink-dark">
-                    {item.title}
-                  </h3>
-                  {item.institution && (
-                    <p className="mt-1 text-sm font-medium text-accent dark:text-accent-dark">
-                      {item.institution}
-                    </p>
-                  )}
-                  {item.description && (
-                    <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
-                      {item.description}
-                    </p>
-                  )}
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+                    {item.image && (
+                      <div className="h-20 w-28 shrink-0 overflow-hidden rounded-sm border border-hairline dark:border-hairline-dark sm:order-2">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                    )}
+
+                    <div className="sm:order-1">
+                      <p className="font-mono text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark">
+                        {item.period} · {statusLabel[item.status]}
+                      </p>
+                      <h3 className="mt-1.5 font-display text-xl text-ink dark:text-ink-dark">
+                        {item.title}
+                      </h3>
+                      {item.institution && (
+                        <p className="mt-1 text-sm font-medium text-accent dark:text-accent-dark">
+                          {item.institution}
+                        </p>
+                      )}
+                      {item.description && (
+                        <p className="mt-2 max-w-xl text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
+                          {item.description}
+                        </p>
+                      )}
+                    </div>
+                  </div>
                 </motion.li>
               ))}
             </ol>

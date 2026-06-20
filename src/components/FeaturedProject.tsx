@@ -42,15 +42,17 @@ export default function FeaturedProject() {
               </ul>
 
               <div className="mt-8 flex flex-wrap gap-3">
-                <a
-                  href={project.links.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn-secondary"
-                >
-                  <Github size={16} />
-                  GitHub
-                </a>
+                {project.links.github && (
+                  <a
+                    href={project.links.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="btn-secondary"
+                  >
+                    <Github size={16} />
+                    GitHub
+                  </a>
+                )}
                 {project.links.demo && (
                   <a
                     href={project.links.demo}

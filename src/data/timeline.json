@@ -5,7 +5,8 @@
     "title": "Secondary / High School Education",
     "institution": "[Your School Name]",
     "description": "Placeholder entry — replace with your real school name, years, and a one-line description if you'd like.",
-    "status": "complete"
+    "status": "complete",
+    "image": ""
   },
   {
     "id": "tl-1",
@@ -13,7 +14,8 @@
     "title": "B.Sc. in Analytical Chemistry",
     "institution": "University of Agriculture, Faisalabad",
     "description": "Foundational training in chemical analysis, instrumentation, and laboratory methods.",
-    "status": "complete"
+    "status": "complete",
+    "image": ""
   },
   {
     "id": "tl-2",
@@ -21,7 +23,8 @@
     "title": "M.Sc. in AI & Machine Learning Enhanced Quantum and Computational Chemistry",
     "institution": "Xiamen University, China",
     "description": "Research on AI-enhanced conformer search and machine learning interatomic potentials, developed within the MLatom and Aitomia ecosystems.",
-    "status": "current"
+    "status": "current",
+    "image": ""
   },
   {
     "id": "tl-3",
@@ -29,7 +32,8 @@
     "title": "Ph.D. in Chemical and Biological Engineering",
     "institution": "Hong Kong University of Science and Technology",
     "description": "Incoming doctoral research at the intersection of AI and chemistry.",
-    "status": "upcoming"
+    "status": "upcoming",
+    "image": ""
   },
   {
     "id": "tl-4",
@@ -37,6 +41,7 @@
     "title": "Professor & Research Group Leader",
     "institution": "",
     "description": "Building a research group at the intersection of artificial intelligence and chemistry.",
-    "status": "future"
+    "status": "future",
+    "image": ""
   }
 ]

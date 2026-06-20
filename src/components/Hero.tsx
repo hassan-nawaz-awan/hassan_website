@@ -77,37 +77,45 @@ export default function Hero() {
           custom={4}
           className="mt-10 flex flex-wrap items-center gap-3"
         >
-          <a href={profile.social.cv} className="btn-primary">
-            <FileText size={16} />
-            Curriculum Vitae
-          </a>
-          <a
-            href={profile.social.googleScholar}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-secondary"
-          >
-            Google Scholar
-            <ArrowUpRight size={14} />
-          </a>
-          <a
-            href={profile.social.github}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-secondary"
-          >
-            <Github size={16} />
-            GitHub
-          </a>
-          <a
-            href={profile.social.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-secondary"
-          >
-            <Linkedin size={16} />
-            LinkedIn
-          </a>
+          {profile.social.cv && (
+            <a href={profile.social.cv} className="btn-primary">
+              <FileText size={16} />
+              Curriculum Vitae
+            </a>
+          )}
+          {profile.social.googleScholar && (
+            <a
+              href={profile.social.googleScholar}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-secondary"
+            >
+              Google Scholar
+              <ArrowUpRight size={14} />
+            </a>
+          )}
+          {profile.social.github && (
+            <a
+              href={profile.social.github}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-secondary"
+            >
+              <Github size={16} />
+              GitHub
+            </a>
+          )}
+          {profile.social.linkedin && (
+            <a
+              href={profile.social.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-secondary"
+            >
+              <Linkedin size={16} />
+              LinkedIn
+            </a>
+          )}
           <a href="#contact" className="btn-secondary">
             <Mail size={16} />
             Contact

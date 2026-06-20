@@ -22,11 +22,22 @@ export default function Awards() {
               transition={{ duration: 0.4, delay: i * 0.06 }}
               className="flex gap-4"
             >
-              <Award
-                size={18}
-                strokeWidth={1.5}
-                className="mt-1 shrink-0 text-ember dark:text-ember-dark"
-              />
+              {award.image ? (
+                <div className="h-12 w-12 shrink-0 overflow-hidden rounded-sm border border-hairline dark:border-hairline-dark">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={award.image}
+                    alt={award.title}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ) : (
+                <Award
+                  size={18}
+                  strokeWidth={1.5}
+                  className="mt-1 shrink-0 text-ember dark:text-ember-dark"
+                />
+              )}
               <div>
                 <div className="flex flex-wrap items-baseline gap-x-3">
                   <h3 className="font-display text-lg text-ink dark:text-ink-dark">

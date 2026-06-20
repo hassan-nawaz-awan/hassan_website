@@ -3,12 +3,14 @@
     "id": "aw-1",
     "title": "HKUST Ph.D. Recruitment Award",
     "year": 2026,
-    "description": "Awarded in support of incoming doctoral studies in Chemical and Biological Engineering."
+    "description": "Awarded in support of incoming doctoral studies in Chemical and Biological Engineering.",
+    "image": ""
   },
   {
     "id": "aw-2",
     "title": "Example: Graduate Research Scholarship",
     "year": 2024,
-    "description": "Placeholder entry — replace with your real award details."
+    "description": "Placeholder entry — replace with your real award details.",
+    "image": ""
   }
 ]

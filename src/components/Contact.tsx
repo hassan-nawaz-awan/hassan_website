@@ -33,35 +33,53 @@ export default function Contact() {
             </p>
 
             <ul className="mt-8 space-y-3">
-              <ContactLink
-                icon={Mail}
-                label={profile.email}
-                href={`mailto:${profile.email}`}
-              />
-              <ContactLink
-                icon={Github}
-                label="GitHub"
-                href={profile.social.github}
-                external
-              />
-              <ContactLink
-                icon={Linkedin}
-                label="LinkedIn"
-                href={profile.social.linkedin}
-                external
-              />
-              <ContactLink
-                icon={ExternalLink}
-                label="Google Scholar"
-                href={profile.social.googleScholar}
-                external
-              />
-              <ContactLink
-                icon={ExternalLink}
-                label="ORCID"
-                href={profile.social.orcid}
-                external
-              />
+              {profile.email && (
+                <ContactLink
+                  icon={Mail}
+                  label={profile.email}
+                  href={`mailto:${profile.email}`}
+                />
+              )}
+              {profile.social.github && (
+                <ContactLink
+                  icon={Github}
+                  label="GitHub"
+                  href={profile.social.github}
+                  external
+                />
+              )}
+              {profile.social.linkedin && (
+                <ContactLink
+                  icon={Linkedin}
+                  label="LinkedIn"
+                  href={profile.social.linkedin}
+                  external
+                />
+              )}
+              {profile.social.googleScholar && (
+                <ContactLink
+                  icon={ExternalLink}
+                  label="Google Scholar"
+                  href={profile.social.googleScholar}
+                  external
+                />
+              )}
+              {profile.social.orcid && (
+                <ContactLink
+                  icon={ExternalLink}
+                  label="ORCID"
+                  href={profile.social.orcid}
+                  external
+                />
+              )}
+              {profile.social.twitter && (
+                <ContactLink
+                  icon={ExternalLink}
+                  label="X / Twitter"
+                  href={profile.social.twitter}
+                  external
+                />
+              )}
             </ul>
           </div>
 

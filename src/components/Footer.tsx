@@ -12,18 +12,24 @@ export default function Footer() {
           Pages.
         </p>
         <div className="flex gap-6">
-          <Link href={profile.social.github} className="link-underline">
-            GitHub
-          </Link>
-          <Link
-            href={profile.social.googleScholar}
-            className="link-underline"
-          >
-            Scholar
-          </Link>
-          <Link href={profile.social.linkedin} className="link-underline">
-            LinkedIn
-          </Link>
+          {profile.social.github && (
+            <Link href={profile.social.github} className="link-underline">
+              GitHub
+            </Link>
+          )}
+          {profile.social.googleScholar && (
+            <Link
+              href={profile.social.googleScholar}
+              className="link-underline"
+            >
+              Scholar
+            </Link>
+          )}
+          {profile.social.linkedin && (
+            <Link href={profile.social.linkedin} className="link-underline">
+              LinkedIn
+            </Link>
+          )}
         </div>
       </div>
     </footer>
