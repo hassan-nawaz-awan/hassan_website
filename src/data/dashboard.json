@@ -1,0 +1,39 @@
+{
+  "activeProjects": [
+    {
+      "id": "proj-1",
+      "name": "AI-Enhanced Conformer Search (MTD)",
+      "status": "Writing up",
+      "description": "Meta-dynamics-based conformer search implemented in MLatom, benchmarked against CREST, deployed on Aitomia."
+    },
+    {
+      "id": "proj-2",
+      "name": "Water Cluster MLIP Training Data",
+      "status": "In progress",
+      "description": "OpenMM-driven generation of water cluster configurations (n = 2–60) with PBC lattice data for downstream AIQM/DFT single-point calculations."
+    },
+    {
+      "id": "proj-3",
+      "name": "Ambimodal Pericyclic Reaction Dynamics",
+      "status": "In progress",
+      "description": "Reproducing literature ambimodal pericyclic reactions using MLatom's uAIQM-optimal model and quasi-classical trajectory analysis."
+    }
+  ],
+  "latestUpdates": [
+    {
+      "id": "upd-1",
+      "date": "2026-06",
+      "text": "Deployed two academic portfolio websites to GitHub Pages."
+    },
+    {
+      "id": "upd-2",
+      "date": "2026-05",
+      "text": "Built a complete QCT pipeline for ambimodal pericyclic reaction analysis with verified bond indices."
+    },
+    {
+      "id": "upd-3",
+      "date": "2026-04",
+      "text": "Developed a Python pipeline for water cluster training data generation using OpenMM."
+    }
+  ]
+}

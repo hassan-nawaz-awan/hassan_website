@@ -1,0 +1,18 @@
+[
+  {
+    "category": "Programming",
+    "items": ["Python", "C++", "Bash", "Git"]
+  },
+  {
+    "category": "Machine Learning",
+    "items": ["PyTorch", "TorchANI", "MLatom", "Deep Learning"]
+  },
+  {
+    "category": "Computational Chemistry",
+    "items": ["ORCA", "CREST", "xTB", "Gaussian", "VASP", "MRCC"]
+  },
+  {
+    "category": "Scientific Computing",
+    "items": ["Linux", "HPC Clusters", "CUDA", "Parallel Computing"]
+  }
+]

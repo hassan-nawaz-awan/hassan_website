@@ -1,0 +1,38 @@
+[
+  {
+    "id": "pub-1",
+    "title": "AI-Enhanced Conformer Search via Meta-Dynamics: Benchmarking Against CREST",
+    "authors": ["Hassan", "Co-Author Name", "Pavlo O. Dral"],
+    "venue": "In preparation",
+    "year": 2026,
+    "type": "preprint",
+    "doi": "",
+    "pdf": "",
+    "abstract": "We introduce an AI-enhanced meta-dynamics (MTD) algorithm for conformational search, implemented within MLatom and deployed on the Aitomia platform, and benchmark it against CREST across a diverse set of molecular systems.",
+    "tags": ["conformer search", "MLatom", "meta-dynamics", "AIQM"]
+  },
+  {
+    "id": "pub-2",
+    "title": "Example: Reproducing Ambimodal Pericyclic Reaction Dynamics with Universal Machine Learning Potentials",
+    "authors": ["Hassan", "Co-Author Name"],
+    "venue": "Example Journal of Computational Chemistry",
+    "year": 2026,
+    "type": "journal",
+    "doi": "",
+    "pdf": "",
+    "abstract": "Placeholder entry — replace with your real publication details. Demonstrates quasi-classical trajectory analysis of ambimodal pericyclic reactions using uAIQM-optimal potentials.",
+    "tags": ["MLIP", "reaction dynamics", "AIQM"]
+  },
+  {
+    "id": "pub-3",
+    "title": "Example: A Living Review Framework for Molecular Machine Learning Potentials",
+    "authors": ["Co-Author Name", "Hassan"],
+    "venue": "Example Conference on Machine Learning for Molecules",
+    "year": 2025,
+    "type": "conference",
+    "doi": "",
+    "pdf": "",
+    "abstract": "Placeholder entry — replace with your real publication details.",
+    "tags": ["benchmarking", "RAG", "MLIP"]
+  }
+]

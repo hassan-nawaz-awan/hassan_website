@@ -1,0 +1,26 @@
+[
+  {
+    "id": "mlip",
+    "title": "Machine Learning Potentials",
+    "description": "Neural network models that learn potential energy surfaces directly from quantum-mechanical data, enabling molecular dynamics at near-DFT accuracy and a fraction of the cost.",
+    "icon": "network"
+  },
+  {
+    "id": "qc",
+    "title": "Quantum Chemistry",
+    "description": "High-level electronic structure methods — from DFT to coupled-cluster theory — used to generate reference data and benchmark machine-learned models.",
+    "icon": "atom"
+  },
+  {
+    "id": "agents",
+    "title": "AI Agents for Science",
+    "description": "Intelligent assistants that plan, execute, and interpret computational chemistry workflows, lowering the barrier between a research question and a converged calculation.",
+    "icon": "bot"
+  },
+  {
+    "id": "discovery",
+    "title": "Molecular Discovery",
+    "description": "Coupling generative and predictive AI with simulation to accelerate the design of new molecules and materials, from conformer search to reaction pathway exploration.",
+    "icon": "sparkles"
+  }
+]

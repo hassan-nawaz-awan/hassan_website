@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --font-newsreader: 'Newsreader', Georgia, serif;
+    --font-plex-sans: 'IBM Plex Sans', system-ui, sans-serif;
+    --font-plex-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+
+  .dark {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-ink dark:bg-canvas-dark dark:text-ink-dark;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+
+  ::selection {
+    @apply bg-accent/20 text-ink dark:text-ink-dark;
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.DEFAULT');
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.18em] text-accent dark:text-accent-dark;
+  }
+
+  .section-heading {
+    @apply font-display text-3xl sm:text-4xl text-ink dark:text-ink-dark;
+  }
+
+  .hairline-rule {
+    @apply border-t border-hairline dark:border-hairline-dark;
+  }
+
+  .container-content {
+    @apply mx-auto w-full max-w-content px-6 sm:px-8 lg:px-10;
+  }
+
+  .card {
+    @apply rounded-md border border-hairline dark:border-hairline-dark bg-surface dark:bg-surface-dark transition-colors;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full border border-hairline dark:border-hairline-dark px-3 py-1 font-mono text-[11px] uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-sm bg-ink text-canvas dark:bg-ink-dark dark:text-canvas-dark px-5 py-2.5 text-sm font-medium transition-opacity hover:opacity-80;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-sm border border-ink/20 dark:border-ink-dark/20 px-5 py-2.5 text-sm font-medium text-ink dark:text-ink-dark transition-colors hover:border-accent hover:text-accent dark:hover:border-accent-dark dark:hover:text-accent-dark;
+  }
+
+  .link-underline {
+    @apply relative text-ink dark:text-ink-dark transition-colors hover:text-accent dark:hover:text-accent-dark;
+  }
+
+  .prose-blog h2 {
+    @apply mt-10 mb-4 font-display text-2xl text-ink dark:text-ink-dark;
+  }
+  .prose-blog h3 {
+    @apply mt-8 mb-3 font-display text-xl text-ink dark:text-ink-dark;
+  }
+  .prose-blog p {
+    @apply mb-5;
+  }
+  .prose-blog ul,
+  .prose-blog ol {
+    @apply mb-5 ml-5 list-disc space-y-2;
+  }
+  .prose-blog a {
+    @apply text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent dark:text-accent-dark dark:decoration-accent-dark/30 dark:hover:decoration-accent-dark;
+  }
+  .prose-blog code {
+    @apply rounded-sm bg-hairline/40 px-1.5 py-0.5 font-mono text-[0.85em] text-ink dark:bg-hairline-dark/60 dark:text-ink-dark;
+  }
+  .prose-blog blockquote {
+    @apply border-l-2 border-accent pl-5 italic dark:border-accent-dark;
+  }
+}
+
+/* Custom scrollbar, kept quiet and academic */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: theme('colors.hairline.DEFAULT');
+  border-radius: 999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background-color: theme('colors.hairline.dark');
+}

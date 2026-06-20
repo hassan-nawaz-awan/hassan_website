@@ -1,0 +1,42 @@
+{
+  "name": "Hassan",
+  "fullNamePlaceholder": "Hassan [Full Name]",
+  "photo": "/images/profile-placeholder.svg",
+  "currentPosition": "Master's Student in AI & ML-Enhanced Quantum and Computational Chemistry",
+  "institution": "Xiamen University, China",
+  "futurePosition": "Incoming Ph.D. Student",
+  "futureInstitution": "Hong Kong University of Science and Technology",
+  "tagline": "Building the future of molecular discovery through artificial intelligence.",
+  "shortFocus": "AI for Chemistry · Computational Chemistry · Scientific Machine Learning",
+  "email": "hassan@example.com",
+  "location": "Xiamen, Fujian, China",
+  "social": {
+    "cv": "/cv/hassan-cv.pdf",
+    "googleScholar": "https://scholar.google.com/citations?user=PLACEHOLDER",
+    "github": "https://github.com/PLACEHOLDER",
+    "linkedin": "https://www.linkedin.com/in/PLACEHOLDER",
+    "orcid": "https://orcid.org/0000-0000-0000-0000",
+    "twitter": ""
+  },
+  "about": {
+    "paragraphs": [
+      "I am a computational chemistry researcher working at the interface of artificial intelligence and quantum chemistry. My research focuses on developing machine learning methods that accelerate molecular simulations and enable next-generation chemical discovery — from neural network interatomic potentials to AI-guided conformational search.",
+      "I am currently completing my Master's degree at Xiamen University, where my work centers on AI-enhanced conformer search algorithms and machine learning interatomic potentials (MLIPs), developed and benchmarked within the MLatom and Aitomia ecosystems. In 2026 I will begin my Ph.D. in Chemical and Biological Engineering at the Hong Kong University of Science and Technology.",
+      "My long-term goal is to advance scientific machine learning methodologies that transform how molecules and materials are designed — and to build the kind of research group where that work happens in the open, in close collaboration with experimentalists."
+    ]
+  },
+  "careerGoal": "Become a leading researcher and professor working at the intersection of artificial intelligence and chemistry.",
+  "researchInterests": [
+    "Artificial Intelligence for Chemistry",
+    "Machine Learning Potentials",
+    "Quantum Chemistry",
+    "Computational Chemistry",
+    "Neural Network Potentials",
+    "Molecular Simulations",
+    "Scientific Machine Learning",
+    "Automated Chemical Discovery",
+    "AI Agents for Scientific Research",
+    "Reaction Mechanism Discovery",
+    "Foundation Models for Chemistry"
+  ]
+}

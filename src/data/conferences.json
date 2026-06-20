@@ -1,0 +1,18 @@
+[
+  {
+    "id": "conf-1",
+    "name": "ACS Spring Meeting",
+    "location": "",
+    "year": 2026,
+    "role": "Presenter",
+    "description": "Placeholder entry — replace with your real conference details and presentation title."
+  },
+  {
+    "id": "conf-2",
+    "name": "Modeling and Design of Molecular Materials (MDMM)",
+    "location": "",
+    "year": 2025,
+    "role": "Attendee",
+    "description": "Placeholder entry — replace with your real conference details."
+  }
+]

@@ -1,0 +1,31 @@
+import Link from 'next/link';
+import profile from '@/data/profile.json';
+
+export default function Footer() {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer className="hairline-rule">
+      <div className="container-content flex flex-col items-start justify-between gap-4 py-10 text-sm text-ink-muted dark:text-ink-muted-dark sm:flex-row sm:items-center">
+        <p>
+          © {year} {profile.name}. Built with Next.js, deployed on GitHub
+          Pages.
+        </p>
+        <div className="flex gap-6">
+          <Link href={profile.social.github} className="link-underline">
+            GitHub
+          </Link>
+          <Link
+            href={profile.social.googleScholar}
+            className="link-underline"
+          >
+            Scholar
+          </Link>
+          <Link href={profile.social.linkedin} className="link-underline">
+            LinkedIn
+          </Link>
+        </div>
+      </div>
+    </footer>
+  );
+}
