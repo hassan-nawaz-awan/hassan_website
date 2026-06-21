@@ -23,6 +23,7 @@ export const navItems = [
   { label: 'Research', href: '/#research' },
   { label: 'Publications', href: '/#publications' },
   { label: 'Timeline', href: '/#timeline' },
+  { label: 'Conferences', href: '/#conferences' },
   { label: 'Collaborate', href: '/#collaborations' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/#contact' },

@@ -7,7 +7,7 @@ import { withBasePath } from '@/lib/utils';
 
 export default function Awards() {
   return (
-    <section className="hairline-rule">
+    <section id="awards" className="hairline-rule scroll-mt-16">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
         <div>
           <span className="eyebrow">09 — Awards</span>

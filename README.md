@@ -127,20 +127,35 @@ It will automatically appear on `/blog` and get its own page at `/blog/my-new-po
 
 ### Adding photos to your timeline, conferences, and awards
 
-These three sections support images:
+Three sections support photos, and two of them (**Timeline** and **Conferences**) use a real lightbox gallery — click any photo on the live site to view it full-size with a caption, and arrow through the rest.
 
-- **Timeline** (`src/data/timeline.json`) — each entry has an `"image"` field. Drop a photo in `public/images/timeline/`, then set `"image": "/images/timeline/your-photo.jpg"` on that entry. Leave it as `""` for entries with no photo.
-- **Conferences** (`src/data/conferences.json`) — each entry has an `"images"` array, so you can add several photos per conference. Drop photos in `public/images/conferences/`, then list them: `"images": ["/images/conferences/photo1.jpg", "/images/conferences/photo2.jpg"]`. Leave it as `[]` for none.
-- **Awards** (`src/data/awards.json`) — each entry has an `"image"` field, same pattern as timeline, photos go in `public/images/awards/`.
+- **Timeline** (`src/data/timeline.json`) — each entry has:
+  - `"image"` — a single small thumbnail shown next to the entry (optional).
+  - `"gallery"` — an array of memory photos for that period, e.g. your years in Pavlo's group. Each item is `{ "src": "/images/timeline/your-photo.jpg", "caption": "A short caption" }`. Add as many as you like; leave `"gallery": []` for entries with none.
+- **Conferences** (`src/data/conferences.json`) — each entry's `"images"` array works the same way: `{ "src": "/images/conferences/your-photo.jpg", "caption": "A short caption" }`. The included example (`conf-1`) is fully filled in with placeholders — copy that pattern for your other conferences.
+- **Awards** (`src/data/awards.json`) — each entry has a single `"image"` field, same pattern as timeline's single image.
+
+To replace a placeholder with a real photo:
+1. Drop your photo file into the matching folder (`public/images/timeline/`, `public/images/conferences/`, or `public/images/awards/`).
+2. In the JSON file, change the `"src"` (or `"image"`) value to `/images/timeline/your-filename.jpg` (matching the folder it's in).
+3. Write your own `"caption"`.
+4. Delete the old placeholder `.svg` file once it's no longer referenced anywhere (optional cleanup).
 
 A few practical tips:
 - Keep filenames simple — lowercase, no spaces (use dashes: `acs-2026-presenting.jpg`).
 - Compress photos before adding them (aim for under ~500KB each) so the site stays fast — any free tool like [squoosh.app](https://squoosh.app) works well.
 - The path always starts with `/images/...` (matching the `public/images/...` folder), never `public/images/...`.
+- To add a brand-new conference, copy the whole `conf-1` block in `conferences.json`, give it a new unique `"id"` (e.g. `"conf-3"`), and fill in your details — that's the fastest way to add more.
 
 ---
 
-## 4. Design system
+## 4. The front-page navigation hub
+
+Right under the hero is a grid of clickable cards ("Research", "Publications", "Timeline", "Conferences", etc.) that jump to every section of the site. This is defined in `src/components/CommandHub.tsx`. If you ever rename a section or add a new one, add or edit an entry in the `hubItems` array there — each one just needs a label, a one-line description, a link (matching the section's `id`), and an icon from [lucide.dev](https://lucide.dev/icons/) (import it from `lucide-react`).
+
+---
+
+## 5. Design system
 
 - **Colors**: defined as CSS-variable-backed Tailwind tokens in `tailwind.config.ts` (`canvas`, `surface`, `ink`, `hairline`, `accent`, `ember`) with light/dark variants. Change the hex values there to re-theme the whole site.
 - **Fonts**: Newsreader (display/serif), IBM Plex Sans (body), IBM Plex Mono (data/labels) — all self-hosted via `@fontsource` packages, so the site makes **zero external font requests** (faster, more private, no Google Fonts dependency).
@@ -148,7 +163,7 @@ A few practical tips:
 
 ---
 
-## 5. Deploying to GitHub Pages
+## 6. Deploying to GitHub Pages
 
 ### Step 1 — Push to a GitHub repository
 
@@ -194,7 +209,7 @@ Just edit a JSON file (or add a blog post), commit, and push to `main` — the A
 
 ---
 
-## 6. Contact form note
+## 7. Contact form note
 
 GitHub Pages only serves static files — there's no server to receive form submissions. The contact form currently opens the visitor's email client with a pre-filled message (a `mailto:` link), which works with zero configuration.
 
@@ -207,7 +222,7 @@ Either can be dropped into `src/components/Contact.tsx` in place of the `mailto:
 
 ---
 
-## 7. Tech stack
+## 8. Tech stack
 
 - [Next.js 15](https://nextjs.org/) (App Router, static export)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -218,7 +233,7 @@ Either can be dropped into `src/components/Contact.tsx` in place of the `mailto:
 - [@fontsource](https://fontsource.org/) for self-hosted fonts
 - [lucide-react](https://lucide.dev/) for icons
 
-## 8. Accessibility & performance notes
+## 9. Accessibility & performance notes
 
 - Semantic landmarks, a skip-to-content link, and visible focus states are built in.
 - `prefers-reduced-motion` is respected — animations are disabled for users who request it.

@@ -6,7 +6,8 @@
     "institution": "[Your School Name]",
     "description": "Placeholder entry — replace with your real school name, years, and a one-line description if you'd like.",
     "status": "complete",
-    "image": ""
+    "image": "",
+    "gallery": []
   },
   {
     "id": "tl-1",
@@ -15,16 +16,31 @@
     "institution": "University of Agriculture, Faisalabad",
     "description": "Foundational training in chemical analysis, instrumentation, and laboratory methods.",
     "status": "complete",
-    "image": ""
+    "image": "",
+    "gallery": []
   },
   {
     "id": "tl-2",
     "period": "2024 — 2026",
     "title": "M.Sc. in AI & Machine Learning Enhanced Quantum and Computational Chemistry",
     "institution": "Xiamen University, China",
-    "description": "Research on AI-enhanced conformer search and machine learning interatomic potentials, developed within the MLatom and Aitomia ecosystems.",
+    "description": "Research on AI-enhanced conformer search and machine learning interatomic potentials, developed within the MLatom and Aitomia ecosystems, as a member of Prof. Pavlo Dral's group.",
     "status": "current",
-    "image": ""
+    "image": "",
+    "gallery": [
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-1.svg",
+        "caption": "Placeholder — replace with a real photo, e.g. a group dinner or lab gathering with Pavlo's group."
+      },
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-2.svg",
+        "caption": "Placeholder — replace with a real photo, e.g. a workshop or group meeting."
+      },
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-3.svg",
+        "caption": "Placeholder — replace with a real photo, e.g. a campus or lab moment."
+      }
+    ]
   },
   {
     "id": "tl-3",
@@ -33,7 +49,8 @@
     "institution": "Hong Kong University of Science and Technology",
     "description": "Incoming doctoral research at the intersection of AI and chemistry.",
     "status": "upcoming",
-    "image": ""
+    "image": "",
+    "gallery": []
   },
   {
     "id": "tl-4",
@@ -42,6 +59,7 @@
     "institution": "",
     "description": "Building a research group at the intersection of artificial intelligence and chemistry.",
     "status": "future",
-    "image": ""
+    "image": "",
+    "gallery": []
   }
 ]
