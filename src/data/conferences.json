@@ -1,11 +1,11 @@
 [
   {
     "id": "conf-1",
-    "name": "ACS Spring Meeting",
-    "location": "",
-    "year": 2026,
-    "role": "Presenter",
-    "description": "Placeholder entry — replace with your real conference details and presentation title.",
+    "name": "The 35th Chinese Chemical Society (CCS) Congress",
+    "location": "Chonginq, China",
+    "year": "April 2026",
+    "role": "Poster Presenter (Best Poster Award Winner)",
+    "description": "Poster Title: How Well AI Agents Perform as Expert Computational Chemists? Case Studies with Aitomia",
     "images": [
       {
         "src": "/images/conferences/conf-1-placeholder-1.svg",
@@ -24,9 +24,9 @@
   {
     "id": "conf-2",
     "name": "Modeling and Design of Molecular Materials (MDMM)",
-    "location": "",
+    "location": "Wrocław University of Technology, Poland",
     "year": 2025,
-    "role": "Attendee",
+    "role": "Poster Presenter",
     "description": "Placeholder entry — replace with your real conference details.",
     "images": []
   },
