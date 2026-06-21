@@ -1,11 +1,11 @@
 [
   {
     "id": "conf-1",
-    "name": "ACS Spring Meeting",
-    "location": "",
+    "name": "The 35Tth Chinese Chemical Society (CCS) Congress",
+    "location": "Chongqing, China",
     "year": 2026,
-    "role": "Presenter",
-    "description": "Placeholder entry — replace with your real conference details and presentation title.",
+    "role": "Poster Presenter (Best Poster Award Winner)",
+    "description": "Poster title: How Well AI Agents Perform as Expert Computational Chemists? Case Studies with Aitomia",
     "images": [
       {
         "src": "/images/conferences/conf-1-placeholder-1.svg",
