@@ -8,9 +8,37 @@
   },
   {
     "id": "aw-2",
-    "title": "Example: Graduate Research Scholarship",
+    "title": "Placeholder Award 2",
+    "year": 2025,
+    "description": "Placeholder entry — replace with your actual award details.",
+    "image": ""
+  },
+  {
+    "id": "aw-3",
+    "title": "Placeholder Award 3",
     "year": 2024,
-    "description": "Placeholder entry — replace with your real award details.",
+    "description": "Placeholder entry — replace with your actual award details.",
+    "image": ""
+  },
+  {
+    "id": "aw-4",
+    "title": "Placeholder Award 4",
+    "year": 2023,
+    "description": "Placeholder entry — replace with your actual award details.",
+    "image": ""
+  },
+  {
+    "id": "aw-5",
+    "title": "Placeholder Award 5",
+    "year": 2022,
+    "description": "Placeholder entry — replace with your actual award details.",
+    "image": ""
+  },
+  {
+    "id": "aw-6",
+    "title": "Placeholder Award 6",
+    "year": 2021,
+    "description": "Placeholder entry — replace with your actual award details.",
     "image": ""
   }
 ]

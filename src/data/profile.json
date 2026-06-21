@@ -1,14 +1,15 @@
 {
-  "name": "Hassan",
-  "fullNamePlaceholder": "Hassan [Full Name]",
+  "name": "Hassan Nawaz",
+  "fullNamePlaceholder": "Hassan Nawaz Awan",
   "photo": "/images/profile-placeholder.svg",
-  "currentPosition": "Master's Student in AI & ML-Enhanced Quantum and Computational Chemistry",
+  "currentPosition": "Master's Student",
   "institution": "Xiamen University, China",
+  "Advisor": "Prof. Pavlo Dral",
   "futurePosition": "Incoming Ph.D. Student",
-  "futureInstitution": "Hong Kong University of Science and Technology",
+  "futureInstitution": "Hong Kong University of Science and Technology (HKUST) with Hanyu Gao",
   "tagline": "Building the future of molecular discovery through artificial intelligence.",
   "shortFocus": "AI for Chemistry · Computational Chemistry · Scientific Machine Learning",
-  "email": "hassan@example.com",
+  "email": "hassanchemist@yahoo.com",
   "location": "Xiamen, Fujian, China",
   "social": {
     "cv": "/cv/hassan-cv.pdf",
@@ -25,18 +26,14 @@
       "My long-term goal is to advance scientific machine learning methodologies that transform how molecules and materials are designed — and to build the kind of research group where that work happens in the open, in close collaboration with experimentalists."
     ]
   },
-  "careerGoal": "Become a leading researcher and professor working at the intersection of artificial intelligence and chemistry.",
+  "careerGoal": "Become a leading researcher working at the intersection of artificial intelligence and chemistry.",
   "researchInterests": [
     "Artificial Intelligence for Chemistry",
-    "Machine Learning Potentials",
-    "Quantum Chemistry",
+    "Machine Learning Interatomic Potentials",
     "Computational Chemistry",
-    "Neural Network Potentials",
-    "Molecular Simulations",
-    "Scientific Machine Learning",
+    "Molecular and Material Simulations",
     "Automated Chemical Discovery",
-    "AI Agents for Scientific Research",
-    "Reaction Mechanism Discovery",
-    "Foundation Models for Chemistry"
+    "AI Agents for Chemical Research",
+    "Reaction Mechanism Discovery"
   ]
 }

@@ -16,5 +16,95 @@
     "role": "Attendee",
     "description": "Placeholder entry — replace with your real conference details.",
     "images": []
+  },
+  {
+    "id": "conf-3",
+    "name": "Placeholder Conference 3",
+    "location": "",
+    "year": 2024,
+    "role": "Presenter",
+    "description": "Placeholder entry — replace with your real conference details.",
+    "images": []
+  },
+  {
+    "id": "conf-4",
+    "name": "Placeholder Conference 4",
+    "location": "",
+    "year": 2024,
+    "role": "Poster Presenter",
+    "description": "Placeholder entry — replace with your real conference details.",
+    "images": []
+  },
+  {
+    "id": "conf-5",
+    "name": "Placeholder Conference 5",
+    "location": "",
+    "year": 2023,
+    "role": "Attendee",
+    "description": "Placeholder entry — replace with your real conference details.",
+    "images": []
+  },
+  {
+    "id": "conf-6",
+    "name": "Placeholder Conference 6",
+    "location": "",
+    "year": 2023,
+    "role": "Speaker",
+    "description": "Placeholder entry — replace with your real conference details.",
+    "images": []
+  },
+  {
+    "id": "conf-7",
+    "name": "Placeholder Conference 7",
+    "location": "",
+    "year": 2022,
+    "role": "Panelist",
+    "description": "Placeholder entry — replace with your real conference details.",
+    "images": []
+  },
+  {
+    "id": "conf-8",
+    "name": "Placeholder Conference 8",
+    "location": "",
+    "year": 2022,
+    "role": "Organizer",
+    "description": "Placeholder entry — replace with your real conference details.",
+    "images": []
+  },
+  {
+    "id": "conf-9",
+    "name": "Placeholder Conference 9",
+    "location": "",
+    "year": 2021,
+    "role": "Presenter",
+    "description": "Placeholder entry — replace with your real conference details.",
+    "images": []
+  },
+  {
+    "id": "conf-10",
+    "name": "Placeholder Conference 10",
+    "location": "",
+    "year": 2021,
+    "role": "Attendee",
+    "description": "Placeholder entry — replace with your real conference details.",
+    "images": []
+  },
+  {
+    "id": "conf-11",
+    "name": "Placeholder Conference 11",
+    "location": "",
+    "year": 2020,
+    "role": "Volunteer",
+    "description": "Placeholder entry — replace with your real conference details.",
+    "images": []
+  },
+  {
+    "id": "conf-12",
+    "name": "Placeholder Conference 12",
+    "location": "",
+    "year": 2020,
+    "role": "Presenter",
+    "description": "Placeholder entry — replace with your real conference details.",
+    "images": []
   }
 ]
