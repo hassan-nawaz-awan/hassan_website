@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import conferences from '@/data/conferences.json';
+import { withBasePath } from '@/lib/utils';
 
 export default function Conferences() {
   return (
@@ -40,7 +41,7 @@ export default function Conferences() {
                     >
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
-                        src={src}
+                        src={withBasePath(src)}
                         alt={`${conf.name} photo ${idx + 1}`}
                         className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
                       />

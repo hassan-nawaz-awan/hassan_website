@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import timeline from '@/data/timeline.json';
+import { withBasePath } from '@/lib/utils';
 
 const statusLabel: Record<string, string> = {
   complete: 'Completed',
@@ -49,7 +50,7 @@ export default function Timeline() {
                       <div className="h-20 w-28 shrink-0 overflow-hidden rounded-sm border border-hairline dark:border-hairline-dark sm:order-2">
                         {/* eslint-disable-next-line @next/next/no-img-element */}
                         <img
-                          src={item.image}
+                          src={withBasePath(item.image)}
                           alt={item.title}
                           className="h-full w-full object-cover"
                         />

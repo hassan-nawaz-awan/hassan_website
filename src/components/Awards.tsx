@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Award } from 'lucide-react';
 import awards from '@/data/awards.json';
+import { withBasePath } from '@/lib/utils';
 
 export default function Awards() {
   return (
@@ -26,7 +27,7 @@ export default function Awards() {
                 <div className="h-12 w-12 shrink-0 overflow-hidden rounded-sm border border-hairline dark:border-hairline-dark">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={award.image}
+                    src={withBasePath(award.image)}
                     alt={award.title}
                     className="h-full w-full object-cover"
                   />

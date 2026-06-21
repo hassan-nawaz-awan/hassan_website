@@ -17,6 +17,7 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { siteConfig } from '@/lib/site-config';
+import { withBasePath } from '@/lib/utils';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
   },
   icons: {
-    icon: '/favicon.svg',
+    icon: withBasePath('/favicon.svg'),
   },
 };
 

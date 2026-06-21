@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowUpRight, FileText, Github, Linkedin, Mail } from 'lucide-react';
 import MolecularBackground from './MolecularBackground';
 import profile from '@/data/profile.json';
+import { withBasePath } from '@/lib/utils';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 16 },
@@ -78,7 +79,7 @@ export default function Hero() {
           className="mt-10 flex flex-wrap items-center gap-3"
         >
           {profile.social.cv && (
-            <a href={profile.social.cv} className="btn-primary">
+            <a href={withBasePath(profile.social.cv)} className="btn-primary">
               <FileText size={16} />
               Curriculum Vitae
             </a>

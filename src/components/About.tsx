@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import profile from '@/data/profile.json';
+import { withBasePath } from '@/lib/utils';
 
 export default function About() {
   return (
@@ -32,7 +33,7 @@ export default function About() {
               <div className="aspect-[4/5] w-full max-w-[200px] overflow-hidden rounded-md border border-hairline dark:border-hairline-dark">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={profile.photo}
+                  src={withBasePath(profile.photo)}
                   alt={`Portrait of ${profile.name}`}
                   className="h-full w-full object-cover grayscale transition-all duration-500 hover:grayscale-0"
                 />
