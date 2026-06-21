@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero';
 import About from '@/components/About';
+import News from '@/components/News';
 import ResearchOverview from '@/components/ResearchOverview';
 import FeaturedProject from '@/components/FeaturedProject';
 import Publications from '@/components/Publications';
@@ -8,6 +9,7 @@ import Metrics from '@/components/Metrics';
 import Skills from '@/components/Skills';
 import Awards from '@/components/Awards';
 import Conferences from '@/components/Conferences';
+import Collaborations from '@/components/Collaborations';
 import Dashboard from '@/components/Dashboard';
 import Contact from '@/components/Contact';
 
@@ -16,6 +18,7 @@ export default function Home() {
     <>
       <Hero />
       <About />
+      <News />
       <ResearchOverview />
       <FeaturedProject />
       <Publications />
@@ -24,6 +27,7 @@ export default function Home() {
       <Skills />
       <Awards />
       <Conferences />
+      <Collaborations />
       <Dashboard />
       <Contact />
     </>

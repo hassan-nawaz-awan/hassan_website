@@ -1,0 +1,14 @@
+{
+  "intro": "I'm always glad to connect with researchers and groups working on AI for chemistry, machine learning potentials, or quantum chemistry methods. If you're interested in collaborating, please reach out below.",
+  "collaborators": [
+    {
+      "id": "collab-1",
+      "name": "Co-Author / Collaborator Name",
+      "role": "Collaborator",
+      "institution": "Example Institution",
+      "description": "Placeholder entry — replace with your real collaborator details and a short description of the work together.",
+      "image": "",
+      "link": ""
+    }
+  ]
+}

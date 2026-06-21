@@ -9,7 +9,7 @@ export default function FeaturedProject() {
     <section className="hairline-rule scroll-mt-16">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
         <div>
-          <span className="eyebrow">03 — Flagship Project</span>
+          <span className="eyebrow">04 — Flagship Project</span>
         </div>
 
         <motion.div

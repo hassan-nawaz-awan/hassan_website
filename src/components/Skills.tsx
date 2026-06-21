@@ -8,7 +8,7 @@ export default function Skills() {
     <section className="hairline-rule">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
         <div>
-          <span className="eyebrow">07 — Skills & Tools</span>
+          <span className="eyebrow">08 — Skills & Tools</span>
         </div>
 
         <div className="grid gap-10 sm:grid-cols-2">

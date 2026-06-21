@@ -15,7 +15,7 @@ export default function Dashboard() {
     <section className="hairline-rule">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
         <div>
-          <span className="eyebrow">10 — Live Dashboard</span>
+          <span className="eyebrow">12 — Live Dashboard</span>
         </div>
 
         <div>

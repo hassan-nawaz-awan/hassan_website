@@ -53,6 +53,8 @@ public/
 | Awards                                   | `src/data/awards.json`                 |
 | Conferences                              | `src/data/conferences.json`            |
 | Research dashboard (active projects etc) | `src/data/dashboard.json`              |
+| News / updates feed                      | `src/data/news.json`                   |
+| Collaborations & collaborators           | `src/data/collaborations.json`         |
 | Blog posts                               | new `.md` file in `src/content/blog/`  |
 | Site title / SEO description / nav links | `src/lib/site-config.ts`               |
 | CV file                                  | replace `public/cv/hassan-cv.pdf`      |
@@ -76,7 +78,37 @@ are all supported.
 
 It will automatically appear on `/blog` and get its own page at `/blog/my-new-post`. No code changes needed.
 
-### Publication entry schema
+### News entry schema
+
+```json
+{
+  "id": "unique-id",
+  "date": "2026-07",
+  "tag": "Milestone",          // any short label: "Milestone", "Publication", "Award", "Talk"...
+  "title": "Started my PhD at HKUST",
+  "description": "A sentence or two about it.",
+  "image": "",                 // optional, path under public/images/news/
+  "link": ""                   // optional, link to more detail
+}
+```
+
+### Collaborations entry schema
+
+`src/data/collaborations.json` has two parts: an `"intro"` string (the paragraph inviting people to collaborate) and a `"collaborators"` list:
+
+```json
+{
+  "id": "unique-id",
+  "name": "Dr. Jane Smith",
+  "role": "Collaborator",       // or "Advisor", "Co-author", etc.
+  "institution": "MIT",
+  "description": "What you worked on together.",
+  "image": "",                  // optional, path under public/images/collaborations/
+  "link": ""                    // optional, their website/profile
+}
+```
+
+
 
 ```json
 {
@@ -92,6 +124,19 @@ It will automatically appear on `/blog` and get its own page at `/blog/my-new-po
   "tags": ["tag-one", "tag-two"]
 }
 ```
+
+### Adding photos to your timeline, conferences, and awards
+
+These three sections support images:
+
+- **Timeline** (`src/data/timeline.json`) — each entry has an `"image"` field. Drop a photo in `public/images/timeline/`, then set `"image": "/images/timeline/your-photo.jpg"` on that entry. Leave it as `""` for entries with no photo.
+- **Conferences** (`src/data/conferences.json`) — each entry has an `"images"` array, so you can add several photos per conference. Drop photos in `public/images/conferences/`, then list them: `"images": ["/images/conferences/photo1.jpg", "/images/conferences/photo2.jpg"]`. Leave it as `[]` for none.
+- **Awards** (`src/data/awards.json`) — each entry has an `"image"` field, same pattern as timeline, photos go in `public/images/awards/`.
+
+A few practical tips:
+- Keep filenames simple — lowercase, no spaces (use dashes: `acs-2026-presenting.jpg`).
+- Compress photos before adding them (aim for under ~500KB each) so the site stays fast — any free tool like [squoosh.app](https://squoosh.app) works well.
+- The path always starts with `/images/...` (matching the `public/images/...` folder), never `public/images/...`.
 
 ---
 

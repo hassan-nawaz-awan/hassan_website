@@ -9,7 +9,7 @@ export default function Conferences() {
     <section className="hairline-rule">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
         <div>
-          <span className="eyebrow">09 — Conferences</span>
+          <span className="eyebrow">10 — Conferences</span>
         </div>
 
         <div className="grid gap-px overflow-hidden rounded-md border border-hairline bg-hairline dark:border-hairline-dark dark:bg-hairline-dark sm:grid-cols-2">

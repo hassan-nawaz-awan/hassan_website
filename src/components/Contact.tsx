@@ -20,7 +20,7 @@ export default function Contact() {
     <section id="contact" className="scroll-mt-16">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
         <div>
-          <span className="eyebrow">11 — Contact</span>
+          <span className="eyebrow">13 — Contact</span>
         </div>
 
         <div className="grid gap-14 lg:grid-cols-2">

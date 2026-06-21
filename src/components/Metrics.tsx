@@ -43,7 +43,7 @@ export default function Metrics() {
     <section className="hairline-rule">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
         <div>
-          <span className="eyebrow">06 — By the Numbers</span>
+          <span className="eyebrow">07 — By the Numbers</span>
         </div>
 
         <div className="grid grid-cols-2 gap-y-10 sm:grid-cols-5">

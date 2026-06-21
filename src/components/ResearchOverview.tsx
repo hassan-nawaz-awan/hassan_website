@@ -16,7 +16,7 @@ export default function ResearchOverview() {
     <section id="research" className="hairline-rule scroll-mt-16">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
         <div>
-          <span className="eyebrow">02 — Research</span>
+          <span className="eyebrow">03 — Research</span>
         </div>
 
         <div>

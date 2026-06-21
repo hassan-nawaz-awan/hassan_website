@@ -10,7 +10,7 @@ export default function Awards() {
     <section className="hairline-rule">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
         <div>
-          <span className="eyebrow">08 — Awards</span>
+          <span className="eyebrow">09 — Awards</span>
         </div>
 
         <ul className="space-y-6">

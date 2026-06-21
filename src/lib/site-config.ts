@@ -19,9 +19,11 @@ export const siteConfig = {
 
 export const navItems = [
   { label: 'About', href: '/#about' },
+  { label: 'News', href: '/#news' },
   { label: 'Research', href: '/#research' },
   { label: 'Publications', href: '/#publications' },
   { label: 'Timeline', href: '/#timeline' },
+  { label: 'Collaborate', href: '/#collaborations' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/#contact' },
 ];
