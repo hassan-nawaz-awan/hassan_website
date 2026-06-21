@@ -1,7 +1,15 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { ArrowUpRight, FileText, Github, Linkedin, Mail } from 'lucide-react';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import {
+  ArrowUpRight,
+  ChevronDown,
+  FileText,
+  Github,
+  Linkedin,
+  Mail,
+} from 'lucide-react';
 import MolecularBackground from './MolecularBackground';
 import profile from '@/data/profile.json';
 import { withBasePath } from '@/lib/utils';
@@ -16,11 +24,28 @@ const fadeUp = {
 };
 
 export default function Hero() {
-  return (
-    <section className="relative overflow-hidden border-b border-hairline dark:border-hairline-dark">
-      <MolecularBackground />
+  const sectionRef = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start start', 'end start'],
+  });
+  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', '18%']);
+  const contentY = useTransform(scrollYProgress, [0, 1], ['0%', '12%']);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
 
-      <div className="container-content relative flex min-h-[88vh] flex-col justify-center py-28">
+  return (
+    <section
+      ref={sectionRef}
+      className="relative overflow-hidden border-b border-hairline dark:border-hairline-dark"
+    >
+      <motion.div style={{ y: bgY }} className="absolute inset-0">
+        <MolecularBackground />
+      </motion.div>
+
+      <motion.div
+        style={{ y: contentY, opacity: contentOpacity }}
+        className="container-content relative flex min-h-[88vh] flex-col justify-center py-28"
+      >
         <motion.p
           variants={fadeUp}
           initial="hidden"
@@ -122,7 +147,26 @@ export default function Hero() {
             Contact
           </a>
         </motion.div>
-      </div>
+      </motion.div>
+
+      <motion.a
+        href="#about"
+        aria-label="Scroll to explore"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.1, duration: 0.6 }}
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-1.5 text-ink-muted dark:text-ink-muted-dark sm:flex"
+      >
+        <span className="font-mono text-[10px] uppercase tracking-[0.2em]">
+          Scroll to explore
+        </span>
+        <motion.span
+          animate={{ y: [0, 5, 0] }}
+          transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <ChevronDown size={16} />
+        </motion.span>
+      </motion.a>
     </section>
   );
 }

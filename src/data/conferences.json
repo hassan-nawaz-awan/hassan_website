@@ -6,7 +6,20 @@
     "year": 2026,
     "role": "Presenter",
     "description": "Placeholder entry — replace with your real conference details and presentation title.",
-    "images": []
+    "images": [
+      {
+        "src": "/images/conferences/conf-1-placeholder-1.svg",
+        "caption": "Placeholder — replace with a real photo, e.g. you presenting your poster or talk."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-2.svg",
+        "caption": "Placeholder — replace with a real photo, e.g. with collaborators or fellow attendees."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-3.svg",
+        "caption": "Placeholder — replace with a real photo, e.g. the venue or a memorable moment."
+      }
+    ]
   },
   {
     "id": "conf-2",

@@ -12,7 +12,7 @@ export default function Dashboard() {
     .slice(0, 3);
 
   return (
-    <section className="hairline-rule">
+    <section id="dashboard" className="hairline-rule scroll-mt-16">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
         <div>
           <span className="eyebrow">12 — Live Dashboard</span>

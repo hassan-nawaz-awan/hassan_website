@@ -1,4 +1,5 @@
 import Hero from '@/components/Hero';
+import CommandHub from '@/components/CommandHub';
 import About from '@/components/About';
 import News from '@/components/News';
 import ResearchOverview from '@/components/ResearchOverview';
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <CommandHub />
       <About />
       <News />
       <ResearchOverview />
