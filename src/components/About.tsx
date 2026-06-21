@@ -35,7 +35,7 @@ export default function About() {
                 <img
                   src={withBasePath(profile.photo)}
                   alt={`Portrait of ${profile.name}`}
-                  className="h-full w-full object-cover grayscale transition-all duration-500 hover:grayscale-0"
+                  className="h-full w-full object-cover"
                 />
               </div>
             </motion.div>
