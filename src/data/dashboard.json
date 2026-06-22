@@ -3,26 +3,26 @@
     {
       "id": "proj-1",
       "name": "Agentic platform for autonomous computational chemistry simulations",
-      "status": "Publised in Journal of Chemical Theory and Computation (JCTC)",
+      "status": "Published in JCTC",
       "description": "Development of an agentic platform for autonomous computational chemistry simulations."
     },
     {
       "id": "proj-2",
-      "name": "Development of accurate machine learning interatomic potential have accuracy exceeding standard density functional theory.",
+      "name": "Machine learning interatomic potentials for predictive quantum chemistry",
       "status": "In progress",
-      "description": "Developing machine learning potentials capable of exceeding the standard density functional theory accuracy."
+      "description": "Developing models that aim to exceed standard density functional theory accuracy."
     },
     {
       "id": "proj-3",
-      "name": "Accurate prediction of heat of formations for organic molecules by introduing the anharmonicity in frequency calculations.",
-      "status": "Done without satidfied and pubslisable results",
-      "description": ""
+      "name": "Anharmonic corrections for accurate heat-of-formation predictions",
+      "status": "Completed — results not yet publishable",
+      "description": "Exploratory work is being refined for future publication."
     },
     {
       "id": "proj-4",
-      "name": "Ensemble learning to make the predictions of machine learning interatomic potentials more robust and accurate. ",
-      "status": "Done without satidfied and pubslisable results",
-      "description": ""
+      "name": "Ensemble methods for more robust and accurate machine learning potentials",
+      "status": "Completed — results not yet publishable",
+      "description": "Further validation and benchmarking are currently underway."
     }
   ],
   "latestUpdates": [

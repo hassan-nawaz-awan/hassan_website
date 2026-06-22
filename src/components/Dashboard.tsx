@@ -1,10 +1,26 @@
 'use client';
 
+'use client';
+
 import { motion } from 'framer-motion';
 import { Activity, Clock, FlaskConical, Newspaper } from 'lucide-react';
 import dashboard from '@/data/dashboard.json';
 import profile from '@/data/profile.json';
 import publications from '@/data/publications.json';
+
+function getStatusStyle(status: string) {
+  const normalized = status.toLowerCase();
+
+  if (normalized.includes('published') || normalized.includes('accepted')) {
+    return 'border-emerald-500/15 bg-emerald-500/5 text-emerald-700 dark:border-emerald-400/15 dark:bg-emerald-400/5 dark:text-emerald-200';
+  }
+
+  if (normalized.includes('in progress') || normalized.includes('ongoing')) {
+    return 'border-amber-500/15 bg-amber-500/5 text-amber-700 dark:border-amber-400/15 dark:bg-amber-400/5 dark:text-amber-200';
+  }
+
+  return 'border-hairline bg-canvas text-ink-muted dark:border-hairline-dark dark:bg-canvas-dark dark:text-ink-muted-dark';
+}
 
 export default function Dashboard() {
   const recentPubs = [...publications]
@@ -20,25 +36,35 @@ export default function Dashboard() {
 
         <div>
           <h2 className="section-heading mb-3">Research dashboard</h2>
-          <p className="mb-12 max-w-xl text-sm text-ink-muted dark:text-ink-muted-dark">
-            A running snapshot of what I&rsquo;m working on, pulled from the
-            same editable data files that power the rest of this site.
+          <p className="mb-10 max-w-2xl text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
+            A concise view of current projects, publications, and updates.
           </p>
 
-          <div className="grid gap-px overflow-hidden rounded-md border border-hairline bg-hairline dark:border-hairline-dark dark:bg-hairline-dark md:grid-cols-2">
+          <div className="grid gap-4 md:grid-cols-2">
             <Panel icon={FlaskConical} title="Active Projects">
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {dashboard.activeProjects.map((p) => (
-                  <li key={p.id}>
-                    <div className="flex items-baseline justify-between gap-3">
-                      <p className="text-sm font-medium text-ink dark:text-ink-dark">
-                        {p.name}
-                      </p>
-                      <span className="pill shrink-0">{p.status}</span>
+                  <li
+                    key={p.id}
+                    className="rounded-md border border-hairline bg-canvas/50 p-4 transition-colors hover:bg-canvas dark:border-hairline-dark dark:bg-canvas-dark/50 dark:hover:bg-canvas-dark"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="min-w-0 flex-1">
+                        <p className="text-sm font-medium leading-snug text-ink dark:text-ink-dark">
+                          {p.name}
+                        </p>
+                        {p.description && (
+                          <p className="mt-1.5 text-xs leading-relaxed text-ink-muted dark:text-ink-muted-dark">
+                            {p.description}
+                          </p>
+                        )}
+                      </div>
+                      <span
+                        className={`inline-flex max-w-[170px] whitespace-normal break-words rounded-full border px-2.5 py-1 text-center font-mono text-[10px] uppercase tracking-[0.16em] ${getStatusStyle(p.status)}`}
+                      >
+                        {p.status}
+                      </span>
                     </div>
-                    <p className="mt-1 text-xs leading-relaxed text-ink-muted dark:text-ink-muted-dark">
-                      {p.description}
-                    </p>
                   </li>
                 ))}
               </ul>
@@ -57,11 +83,14 @@ export default function Dashboard() {
             <Panel icon={Newspaper} title="Recent Publications">
               <ul className="space-y-3">
                 {recentPubs.map((p) => (
-                  <li key={p.id}>
-                    <p className="text-sm text-ink dark:text-ink-dark">
+                  <li
+                    key={p.id}
+                    className="rounded-md border border-hairline bg-canvas/40 p-3 transition-colors hover:bg-canvas dark:border-hairline-dark dark:bg-canvas-dark/40 dark:hover:bg-canvas-dark"
+                  >
+                    <p className="text-sm leading-snug text-ink dark:text-ink-dark">
                       {p.title}
                     </p>
-                    <p className="font-mono text-xs text-ink-muted dark:text-ink-muted-dark">
+                    <p className="mt-1 font-mono text-xs text-ink-muted dark:text-ink-muted-dark">
                       {p.venue} · {p.year}
                     </p>
                   </li>
@@ -73,10 +102,10 @@ export default function Dashboard() {
               <ul className="space-y-3">
                 {dashboard.latestUpdates.map((u) => (
                   <li key={u.id} className="flex gap-3 text-sm">
-                    <span className="shrink-0 font-mono text-xs text-ink-muted dark:text-ink-muted-dark">
+                    <span className="mt-0.5 shrink-0 font-mono text-xs text-ink-muted dark:text-ink-muted-dark">
                       {u.date}
                     </span>
-                    <span className="text-ink-muted dark:text-ink-muted-dark">
+                    <span className="leading-relaxed text-ink-muted dark:text-ink-muted-dark">
                       {u.text}
                     </span>
                   </li>
@@ -105,7 +134,7 @@ function Panel({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5 }}
-      className="bg-surface p-7 dark:bg-surface-dark"
+      className="rounded-md border border-hairline bg-surface p-6 shadow-sm dark:border-hairline-dark dark:bg-surface-dark"
     >
       <div className="mb-5 flex items-center gap-2.5">
         <Icon
