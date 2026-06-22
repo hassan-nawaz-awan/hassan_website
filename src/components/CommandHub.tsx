@@ -104,55 +104,46 @@ const cardVariants = {
 export default function CommandHub() {
   return (
     <section className="hairline-rule">
-      <div className="container-content py-20">
+      <div className="container-content py-14">
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: 8 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.5 }}
-          className="mb-8 flex items-end justify-between gap-4"
+          className="mb-6 eyebrow"
         >
-          <div>
-            <span className="eyebrow">Explore</span>
-            <h2 className="mt-2 font-display text-2xl text-ink dark:text-ink-dark sm:text-3xl">
-              Jump to any part of my research life
-            </h2>
-          </div>
+          On this page
         </motion.div>
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-          {hubItems.map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <motion.a
-                key={item.label}
-                href={item.href}
-                custom={i}
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, margin: '-40px' }}
-                whileHover={{ y: -3 }}
-                whileTap={{ scale: 0.98 }}
-                className="group flex flex-col gap-3 rounded-md border border-hairline bg-surface p-5 transition-colors hover:border-accent dark:border-hairline-dark dark:bg-surface-dark dark:hover:border-accent-dark"
-              >
-                <Icon
-                  size={20}
-                  strokeWidth={1.5}
-                  className="text-accent transition-transform duration-300 group-hover:scale-110 dark:text-accent-dark"
-                />
-                <div>
-                  <p className="font-display text-base text-ink dark:text-ink-dark">
+        <nav aria-label="Section index">
+          <ul className="flex flex-wrap gap-x-7 gap-y-3">
+            {hubItems.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <motion.li
+                  key={item.label}
+                  custom={i}
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, margin: '-40px' }}
+                >
+                  <a
+                    href={item.href}
+                    className="link-underline group inline-flex items-center gap-2 text-sm text-ink-muted transition-colors hover:text-accent dark:text-ink-muted-dark dark:hover:text-accent-dark"
+                  >
+                    <Icon
+                      size={14}
+                      strokeWidth={1.5}
+                      className="text-accent/70 dark:text-accent-dark/70"
+                    />
                     {item.label}
-                  </p>
-                  <p className="mt-0.5 text-xs leading-snug text-ink-muted dark:text-ink-muted-dark">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.a>
-            );
-          })}
-        </div>
+                  </a>
+                </motion.li>
+              );
+            })}
+          </ul>
+        </nav>
       </div>
     </section>
   );

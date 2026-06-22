@@ -38,7 +38,7 @@ const config: Config = {
         },
       },
       boxShadow: {
-        card: '0 24px 80px rgba(15, 23, 42, 0.12)',
+        card: '0 16px 48px rgba(15, 23, 42, 0.08)',
       },
       fontFamily: {
         display: ['var(--font-display)', 'Georgia', 'serif'],

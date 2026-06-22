@@ -1,6 +1,5 @@
 {
   "name": "Hassan Nawaz",
-  "fullNamePlaceholder": "Hassan Nawaz Awan",
   "photo": "/images/hassan-profile-pic.png",
   "currentPosition": "Master's Student",
   "institution": "Xiamen University, China",
@@ -14,7 +13,7 @@
   "social": {
     "cv": "/cv/hassan-cv.pdf",
     "googleScholar": "https://scholar.google.com/citations?user=_JOKn14AAAAJ&hl=en",
-    "github": "https://hassan-nawaz-awan.github.io/hassan_website/#publications",
+    "github": "https://github.com/hassan-nawaz-awan",
     "linkedin": "www.linkedin.com/in/hassan-nawaz-a5059b302",
     "orcid": "https://orcid.org/0009-0008-6332-7162",
     "twitter": ""

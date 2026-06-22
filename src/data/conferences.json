@@ -24,36 +24,36 @@
   {
     "id": "conf-2",
     "name": "American Chemical Society (ACS) Spring Meeting",
-    "location": "Atlanta, Georgia, USA (Didn't travel because travel restrictions",
+    "location": "Atlanta, Georgia, USA",
     "year": "22-26 March 2026",
-    "role": "Poster Presenter",
-    "description": "Poster title: How Well AI Agents Perform as Expert Computational Chemists? Case Studies with Aitomia"
+    "role": "Poster Presenter (presented remotely)",
+    "description": "Poster title: How Well AI Agents Perform as Expert Computational Chemists? Case Studies with Aitomia. Presented remotely due to travel restrictions."
   },
   {
     "id": "conf-3",
-    "name": "International Conference of Computational Organic-synhtesis Catalysis 2025 (ICCOC2025)",
-    "location": "Schenzen, China",
+    "name": "International Conference on Computational Organic Synthesis and Catalysis 2025 (ICCOC2025)",
+    "location": "Shenzhen, China",
     "year": "November 2025",
     "role": "Poster Presenter",
     "description": "Poster title: How Well AI Agents Perform as Expert Computational Chemists? Case Studies with Aitomia",
     "images": [
       {
         "src": "/images/conferences/iccoc25_1st_image.jpg",
-        "caption": "Placeholder photo for ICCOC2025."
+        "caption": "With fellow conference attendees outside the Southern University of Science and Technology campus, the venue for ICCOC2025."
       },
       {
         "src": "/images/conferences/iccoc25_2nd_image.jpg",
-        "caption": "Placeholder photo for ICCOC2025."
+        "caption": "Presenting my poster, “How Well AI Agents Perform as Expert Computational Chemists? Case Studies with Aitomia,” at ICCOC2025."
       },
       {
         "src": "/images/conferences/iccoc25_3rd_image.jpg",
-        "caption": "Placeholder photo for ICCOC2025."
+        "caption": "With a fellow researcher during a poster session at ICCOC2025."
       }
     ]
   },
   {
     "id": "conf-4",
-    "name": "Hands-on Workshop on Electronic-Structure Theory and Artificial Intelligence for Material Intelligence (ES-AIM 2024)",
+    "name": "Hands-on Workshop on Electronic-Structure Theory and Artificial Intelligence for Materials (ES-AIM 2024)",
     "location": "Shanghai, China",
     "year": "November 2025",
     "role": "Poster Presenter",
@@ -61,15 +61,7 @@
     "images": [
       {
         "src": "/images/conferences/shanghai_1st_image.jpg",
-        "caption": "Placeholder photo for ES-AIM 2024."
-      },
-      {
-        "src": "/images/conferences/iccoc25_1st_image.jpg",
-        "caption": "Additional image from the ES-AIM 2024 event."
-      },
-      {
-        "src": "/images/conferences/mdmm25_1st_image.jpg",
-        "caption": "Another view from the ES-AIM 2024 workshop."
+        "caption": "Presenting Aitomia during the ES-AIM 2024 hands-on workshop in Shanghai."
       }
     ]
   },
@@ -83,15 +75,15 @@
     "images": [
       {
         "src": "/images/conferences/mdmm25_1st_image.jpg",
-        "caption": "Placeholder photo for MDMM 2025."
+        "caption": "With fellow MDMM 2025 attendees along the riverside in Wrocław, Poland."
       },
       {
         "src": "/images/conferences/mdmm25_2nd_image.jpg",
-        "caption": "Placeholder photo for MDMM 2025."
+        "caption": "Presenting the Aitomia poster at MDMM 2025."
       },
       {
         "src": "/images/conferences/mdmm25_3rd_image.jpg",
-        "caption": "Placeholder photo for MDMM 2025."
+        "caption": "Dinner with colleagues during MDMM 2025."
       }
     ]
   }

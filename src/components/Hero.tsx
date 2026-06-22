@@ -174,7 +174,7 @@ export default function Hero() {
           custom={4.5}
           className="hidden lg:block"
         >
-          <div className="ml-auto max-w-md rounded-3xl border border-hairline bg-surface/85 p-8 shadow-sm backdrop-blur dark:border-hairline-dark dark:bg-surface-dark/80">
+          <div className="ml-auto max-w-md rounded-2xl border border-hairline bg-surface/85 p-8 shadow-sm backdrop-blur dark:border-hairline-dark dark:bg-surface-dark/80">
             <p className="font-mono text-[11px] uppercase tracking-[0.24em] text-accent dark:text-accent-dark">
               Research Snapshot
             </p>
@@ -191,7 +191,7 @@ export default function Hero() {
               </div>
               <div className="rounded-2xl border border-hairline bg-canvas/50 p-4 dark:border-hairline-dark dark:bg-canvas-dark/50">
                 <p className="text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
-                  Focused on building robust, interpretable, and application-driven research that connects theory with real-world impact.
+                  Currently building machine learning potentials and AI agents that accelerate molecular discovery, advised by Prof. Pavlo Dral.
                 </p>
               </div>
             </div>

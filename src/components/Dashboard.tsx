@@ -21,7 +21,8 @@ function getStatusStyle(status: string) {
 }
 
 export default function Dashboard() {
-  const recentPubs = [...publications]
+  const recentPubs = publications
+    .filter((p) => !p.hidden)
     .sort((a, b) => b.year - a.year)
     .slice(0, 3);
 
@@ -29,12 +30,12 @@ export default function Dashboard() {
     <section id="dashboard" className="hairline-rule scroll-mt-16">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
         <div>
-          <span className="eyebrow">12 — Live Dashboard</span>
+          <span className="eyebrow">12 — Current Work</span>
         </div>
 
         <div>
           <div className="mb-8">
-            <h2 className="section-heading mb-3">Research dashboard</h2>
+            <h2 className="section-heading mb-3">Where things stand</h2>
             <p className="max-w-2xl text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
               A concise view of current projects, publications, and updates.
             </p>
@@ -46,7 +47,7 @@ export default function Dashboard() {
                 {dashboard.activeProjects.map((p) => (
                   <li
                     key={p.id}
-                    className="rounded-xl border border-hairline bg-canvas/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 hover:bg-canvas dark:border-hairline-dark dark:bg-canvas-dark/60 dark:hover:border-accent-dark/40 dark:hover:bg-canvas-dark"
+                    className="rounded-xl border border-hairline bg-canvas/60 p-4 transition-colors duration-200 hover:border-accent/40 dark:border-hairline-dark dark:bg-canvas-dark/60 dark:hover:border-accent-dark/40"
                   >
                     <div className="flex items-start gap-3">
                       <div className="min-w-0 flex-1">
@@ -85,7 +86,7 @@ export default function Dashboard() {
                 {recentPubs.map((p) => (
                   <li
                     key={p.id}
-                    className="rounded-xl border border-hairline bg-canvas/50 p-3 transition-all duration-200 hover:-translate-y-0.5 hover:border-accent/40 dark:border-hairline-dark dark:bg-canvas-dark/50 dark:hover:border-accent-dark/40"
+                    className="rounded-xl border border-hairline bg-canvas/50 p-3 transition-colors duration-200 hover:border-accent/40 dark:border-hairline-dark dark:bg-canvas-dark/50 dark:hover:border-accent-dark/40"
                   >
                     <p className="text-sm leading-snug text-ink dark:text-ink-dark">
                       {p.title}
@@ -134,7 +135,7 @@ function Panel({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5 }}
-      className="rounded-3xl border border-hairline bg-surface/90 p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md dark:border-hairline-dark dark:bg-surface-dark/90"
+      className="rounded-2xl border border-hairline bg-surface/90 p-6 shadow-sm transition-all duration-300 dark:border-hairline-dark dark:bg-surface-dark/90"
     >
       <div className="mb-5 flex items-center gap-2.5">
         <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent/5 text-accent dark:bg-accent-dark/10 dark:text-accent-dark">

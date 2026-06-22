@@ -2,9 +2,12 @@
 
 import { motion } from 'framer-motion';
 import { ArrowUpRight, ExternalLink, FileText, Github } from 'lucide-react';
-import projects from '@/data/featured-project.json';
+import allProjects from '@/data/featured-project.json';
 
 export default function FeaturedProject() {
+  const projects = allProjects.filter((p) => !p.hidden);
+  if (projects.length === 0) return null;
+
   return (
     <section className="hairline-rule scroll-mt-16">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">

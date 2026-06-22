@@ -3,10 +3,10 @@
   "collaborators": [
     {
       "id": "collab-1",
-      "name": "Prof. Dr Hab. Ireneusz Grabowski, Szymon Śmiga and   ",
-      "role": "Collaborator",
+      "name": "Prof. Ireneusz Grabowski & Dr. Szymon Śmiga",
+      "role": "Collaborators",
       "institution": "Faculty of Physics, Astronomy and Informatics, Nicolaus Copernicus University in Toruń, Poland",
-      "description": "Developing machine learning potentials capable of exceeding the standard density funtional theory accuracy.",
+      "description": "Developing machine learning potentials capable of exceeding standard density functional theory accuracy.",
       "image": "",
       "link": ""
     }

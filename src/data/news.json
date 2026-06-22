@@ -1,10 +1,11 @@
 [
   {
     "id": "news-1",
+    "hidden": true,
     "date": "2026-06",
     "tag": "Milestone",
     "title": "Wrapping up my Master's at Xiamen University",
-    "description": "Placeholder entry — replace with your real news. Use this section for milestones like starting your PhD at HKUST, new publications, awards, or conference talks.",
+    "description": "Add a real description for this milestone, or replace with another update (new publication, award, or conference talk) before unhiding.",
     "image": "",
     "link": ""
   }

@@ -1,5 +1,6 @@
 [
   {
+    "hidden": false,
     "title": "Aitomia",
     "subtitle": "AI Agents for Computational Chemistry",
     "description": "Aitomia is an intelligent, AI-driven platform designed to assist researchers in quantum chemistry and atomistic simulation. It integrates large language models, scientific workflows, and machine learning tools — including MLatom and AIQM methods — to streamline computational chemistry research, from input generation to result interpretation.",
@@ -9,7 +10,7 @@
       "AI-enhanced conformer search via meta-dynamics, benchmarked against CREST",
       "Designed to lower the barrier between a research question and a converged result"
     ],
-    "image": "/images/aitomia-aitomia.png",
+    "image": "/images/aitomia.png",
     "links": {
       "github": "https://github.com/dralgroup/aitomia/",
       "paper": "https://pubs.acs.org/doi/10.1021/acs.jctc.6c00591",
@@ -17,13 +18,14 @@
     }
   },
   {
-    "title": "Accurate Machine learning Interatomic Potentials Exceeding DFT Accuracy",
-    "subtitle": "Confidential because unpublished",
-    "description": "Confidential because unpublished.",
+    "hidden": true,
+    "title": "Accurate Machine Learning Interatomic Potentials Exceeding DFT Accuracy",
+    "subtitle": "Unpublished — in preparation",
+    "description": "Details withheld until the manuscript is submitted.",
     "highlights": [
-      "Placeholder highlight 1",
-      "Placeholder highlight 2",
-      "Placeholder highlight 3"
+      "Highlight 1 — fill in once the work is ready to share",
+      "Highlight 2 — fill in once the work is ready to share",
+      "Highlight 3 — fill in once the work is ready to share"
     ],
     "image": "/images/aitomia-placeholder.svg",
     "links": {

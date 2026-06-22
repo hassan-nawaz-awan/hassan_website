@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: 'Hassan',
-  title: 'Hassan — AI for Chemistry',
+  name: 'Hassan Nawaz',
+  title: 'Hassan Nawaz — AI for Chemistry',
   description:
-    'Personal academic website of Hassan, a computational chemistry researcher working on AI-enhanced conformer search, machine learning interatomic potentials, and scientific machine learning. Incoming Ph.D. student at HKUST.',
-  url: 'https://example.github.io',
+    'Personal academic website of Hassan Nawaz, a computational chemistry researcher working on AI-enhanced conformer search, machine learning interatomic potentials, and scientific machine learning. Incoming Ph.D. student at HKUST.',
+  url: 'https://hassan-nawaz-awan.github.io/hassan_website',
   keywords: [
     'computational chemistry',
     'machine learning potentials',

@@ -58,7 +58,9 @@ export default function Timeline() {
 
             <ol className="space-y-16">
               {timeline.map((item, i) => {
-                const gallery: GalleryImage[] = item.gallery || [];
+                const gallery: GalleryImage[] = (item.gallery || []).filter(
+                  (img) => !img.src.includes('placeholder')
+                );
 
                 return (
                   <motion.li

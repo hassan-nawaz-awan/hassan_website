@@ -44,7 +44,7 @@ export default function Conferences() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ duration: 0.45, delay: i * 0.06 }}
-                  className="group overflow-hidden rounded-3xl border border-hairline bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-hairline-dark dark:bg-surface-dark"
+                  className="group overflow-hidden rounded-2xl border border-hairline bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-hairline-dark dark:bg-surface-dark"
                 >
                   {featuredImage && (
                     <button
@@ -122,7 +122,7 @@ export default function Conferences() {
                             key={img.src}
                             type="button"
                             onClick={() => openGallery(images, idx)}
-                            className="aspect-square overflow-hidden rounded-3xl border border-hairline transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg dark:border-hairline-dark"
+                            className="aspect-square overflow-hidden rounded-xl border border-hairline transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg dark:border-hairline-dark"
                             aria-label={`Open photo: ${img.caption || conf.name}`}
                           >
                             {/* eslint-disable-next-line @next/next/no-img-element */}

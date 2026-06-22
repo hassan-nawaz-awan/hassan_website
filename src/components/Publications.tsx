@@ -20,6 +20,7 @@ export default function Publications() {
 
   const filtered = useMemo(() => {
     return publications
+      .filter((p) => !p.hidden)
       .filter((p) => (type === 'all' ? true : p.type === type))
       .filter((p) => {
         if (!query.trim()) return true;
@@ -69,7 +70,7 @@ export default function Publications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.5 }}
-              className="mb-8 rounded-3xl border border-accent/15 bg-gradient-to-br from-accent/5 via-surface to-surface p-6 dark:border-accent-dark/15 dark:from-accent-dark/5 dark:via-surface-dark dark:to-surface-dark"
+              className="mb-8 rounded-2xl border border-accent/15 bg-accent/5 p-6 dark:border-accent-dark/15 dark:bg-accent-dark/5"
             >
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div>

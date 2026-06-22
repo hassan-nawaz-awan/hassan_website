@@ -21,8 +21,8 @@
   body {
     @apply min-h-screen bg-canvas text-ink antialiased dark:bg-canvas-dark dark:text-ink-dark;
     background-image:
-      radial-gradient(circle at 18% 12%, rgba(67, 56, 202, 0.16), transparent 20%),
-      radial-gradient(circle at 82% 8%, rgba(79, 70, 229, 0.12), transparent 18%),
+      radial-gradient(circle at 18% 12%, rgba(67, 56, 202, 0.09), transparent 20%),
+      radial-gradient(circle at 82% 8%, rgba(79, 70, 229, 0.07), transparent 18%),
       linear-gradient(to bottom, rgba(255, 255, 255, 0.92), rgba(249, 251, 255, 0.98));
     background-attachment: fixed;
     font-feature-settings: 'cv11', 'ss01';
@@ -69,7 +69,7 @@
   }
 
   .card {
-    @apply rounded-[2rem] border border-hairline dark:border-hairline-dark bg-surface dark:bg-surface-dark shadow-card transition-all duration-300;
+    @apply rounded-2xl border border-hairline dark:border-hairline-dark bg-surface dark:bg-surface-dark shadow-card transition-all duration-300;
   }
 
   .pill {
@@ -77,11 +77,11 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-[1.5rem] bg-gradient-to-r from-accent via-[#5f78f2] to-[#4338ca] px-6 py-3 text-sm font-semibold text-canvas shadow-card transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_24px_70px_rgba(67,56,202,0.18)];
+    @apply inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-semibold text-canvas shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-light hover:shadow-md;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 rounded-[1.5rem] border border-hairline/90 bg-surface/90 px-6 py-3 text-sm font-semibold text-ink shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent hover:shadow-md dark:border-hairline-dark/80 dark:bg-surface-dark/90 dark:text-ink-dark dark:hover:border-accent-dark dark:hover:text-accent-dark;
+    @apply inline-flex items-center gap-2 rounded-full border border-hairline/90 bg-surface/90 px-6 py-3 text-sm font-semibold text-ink shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent hover:shadow-md dark:border-hairline-dark/80 dark:bg-surface-dark/90 dark:text-ink-dark dark:hover:border-accent-dark dark:hover:text-accent-dark;
   }
 
   .link-underline {

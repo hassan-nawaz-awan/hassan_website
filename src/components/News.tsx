@@ -6,7 +6,9 @@ import news from '@/data/news.json';
 import { withBasePath } from '@/lib/utils';
 
 export default function News() {
-  const sorted = [...news].sort((a, b) => (a.date < b.date ? 1 : -1));
+  const sorted = news
+    .filter((item) => !item.hidden)
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
 
   return (
     <section id="news" className="hairline-rule scroll-mt-16">
@@ -18,6 +20,11 @@ export default function News() {
         <div>
           <h2 className="section-heading mb-12">Latest updates</h2>
 
+          {sorted.length === 0 ? (
+            <p className="text-sm text-ink-muted dark:text-ink-muted-dark">
+              No updates yet — check back soon.
+            </p>
+          ) : (
           <ul className="space-y-8">
             {sorted.map((item, i) => (
               <motion.li
@@ -66,6 +73,7 @@ export default function News() {
               </motion.li>
             ))}
           </ul>
+          )}
         </div>
       </div>
     </section>
