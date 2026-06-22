@@ -30,6 +30,8 @@ export default function Publications() {
       .sort((a, b) => b.year - a.year);
   }, [query, type]);
 
+  const featuredPub = filtered[0];
+
   return (
     <section id="publications" className="hairline-rule scroll-mt-16">
       <div className="container-content grid gap-10 py-24 lg:grid-cols-[200px_1fr] lg:gap-16">
@@ -60,6 +62,56 @@ export default function Publications() {
               />
             </div>
           </div>
+
+          {featuredPub && (
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5 }}
+              className="mb-8 rounded-3xl border border-accent/15 bg-gradient-to-br from-accent/5 via-surface to-surface p-6 dark:border-accent-dark/15 dark:from-accent-dark/5 dark:via-surface-dark dark:to-surface-dark"
+            >
+              <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <div>
+                  <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-accent dark:text-accent-dark">
+                    Featured paper
+                  </p>
+                  <h3 className="mt-2 font-display text-2xl text-ink dark:text-ink-dark">
+                    {featuredPub.title}
+                  </h3>
+                </div>
+                <span className="pill">{featuredPub.type}</span>
+              </div>
+              <p className="mt-3 text-sm text-ink-muted dark:text-ink-muted-dark">
+                {featuredPub.authors.join(', ')} · {featuredPub.year}
+              </p>
+              <p className="mt-2 text-sm italic text-ink-muted dark:text-ink-muted-dark">
+                {featuredPub.venue}
+              </p>
+              <div className="mt-4 flex gap-4">
+                {featuredPub.doi && (
+                  <a
+                    href={`https://doi.org/${featuredPub.doi}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-accent dark:text-accent-dark"
+                  >
+                    DOI <ExternalLink size={11} />
+                  </a>
+                )}
+                {featuredPub.pdf && (
+                  <a
+                    href={featuredPub.pdf}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-accent dark:text-accent-dark"
+                  >
+                    <FileText size={11} /> PDF
+                  </a>
+                )}
+              </div>
+            </motion.div>
+          )}
 
           <div className="mb-8 flex flex-wrap gap-2">
             {filters.map((f) => (

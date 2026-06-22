@@ -55,6 +55,39 @@ export default function About() {
             </div>
           </div>
 
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {[
+              {
+                label: 'Research focus',
+                value: 'AI for molecular discovery',
+              },
+              {
+                label: 'Approach',
+                value: 'Interpretable, data-driven models',
+              },
+              {
+                label: 'Vision',
+                value: 'Open, collaborative science',
+              },
+            ].map((item, index) => (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.5, delay: 0.1 * index }}
+                className="rounded-2xl border border-hairline bg-surface p-4 shadow-sm dark:border-hairline-dark dark:bg-surface-dark"
+              >
+                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-muted dark:text-ink-muted-dark">
+                  {item.label}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-ink dark:text-ink-dark">
+                  {item.value}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}

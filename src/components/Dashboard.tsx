@@ -134,7 +134,7 @@ function Panel({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5 }}
-      className="rounded-2xl border border-hairline bg-surface p-6 shadow-sm transition-shadow duration-300 dark:border-hairline-dark dark:bg-surface-dark"
+      className="rounded-3xl border border-hairline bg-surface/90 p-6 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md dark:border-hairline-dark dark:bg-surface-dark/90"
     >
       <div className="mb-5 flex items-center gap-2.5">
         <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent/5 text-accent dark:bg-accent-dark/10 dark:text-accent-dark">

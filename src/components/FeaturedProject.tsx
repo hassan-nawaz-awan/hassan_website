@@ -25,7 +25,7 @@ export default function FeaturedProject() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.6 }}
-                className="overflow-hidden rounded-2xl border border-hairline bg-surface shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-hairline-dark dark:bg-surface-dark"
+                className="overflow-hidden rounded-3xl border border-hairline bg-surface shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-md dark:border-hairline-dark dark:bg-surface-dark"
               >
                 <div className="p-8 sm:p-10">
                   <p className="eyebrow">{project.subtitle}</p>
