@@ -1,18 +1,18 @@
 [
   {
     "category": "Programming",
-    "items": ["Python", "C++", "Bash", "Git"]
+    "items": ["Python", "Bash", "Git"]
   },
   {
     "category": "Machine Learning",
-    "items": ["PyTorch", "TorchANI", "MLatom", "Deep Learning"]
+    "items": ["PyTorch", "TorchANI", "MLatom"]
   },
   {
     "category": "Computational Chemistry",
-    "items": ["ORCA", "CREST", "xTB", "Gaussian", "VASP", "MRCC"]
+    "items": ["ORCA", "CREST", "xTB", "Gaussian", "VASP", "MRCC",  "MLatom"]
   },
   {
     "category": "Scientific Computing",
-    "items": ["Linux", "HPC Clusters", "CUDA", "Parallel Computing"]
+    "items": ["Linux", "HPC Clusters", "Parallel Computing"]
   }
 ]

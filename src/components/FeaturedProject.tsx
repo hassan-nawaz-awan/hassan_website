@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowUpRight, ExternalLink, FileText, Github } from 'lucide-react';
-import project from '@/data/featured-project.json';
+import projects from '@/data/featured-project.json';
 
 export default function FeaturedProject() {
   return (
@@ -12,78 +12,83 @@ export default function FeaturedProject() {
           <span className="eyebrow">04 — Flagship Project</span>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.6 }}
-          className="card overflow-hidden"
-        >
-          <div className="grid lg:grid-cols-[1.1fr_1fr]">
-            <div className="p-8 sm:p-10">
-              <p className="eyebrow">{project.subtitle}</p>
-              <h3 className="mt-3 font-display text-3xl text-ink dark:text-ink-dark sm:text-4xl">
-                {project.title}
-              </h3>
-              <p className="mt-5 text-[15px] leading-relaxed text-ink-muted dark:text-ink-muted-dark">
-                {project.description}
-              </p>
+        <div className="space-y-6">
+          {projects.map((project) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.6 }}
+              className="card overflow-hidden"
+            >
+              <div className="grid lg:grid-cols-[1.1fr_1fr]">
+                <div className="p-8 sm:p-10">
+                  <p className="eyebrow">{project.subtitle}</p>
+                  <h3 className="mt-3 font-display text-3xl text-ink dark:text-ink-dark sm:text-4xl">
+                    {project.title}
+                  </h3>
+                  <p className="mt-5 text-[15px] leading-relaxed text-ink-muted dark:text-ink-muted-dark">
+                    {project.description}
+                  </p>
 
-              <ul className="mt-6 space-y-2.5">
-                {project.highlights.map((h) => (
-                  <li
-                    key={h}
-                    className="flex gap-3 text-sm text-ink-muted dark:text-ink-muted-dark"
-                  >
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent dark:bg-accent-dark" />
-                    {h}
-                  </li>
-                ))}
-              </ul>
+                  <ul className="mt-6 space-y-2.5">
+                    {project.highlights.map((h) => (
+                      <li
+                        key={h}
+                        className="flex gap-3 text-sm text-ink-muted dark:text-ink-muted-dark"
+                      >
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent dark:bg-accent-dark" />
+                        {h}
+                      </li>
+                    ))}
+                  </ul>
 
-              <div className="mt-8 flex flex-wrap gap-3">
-                {project.links.github && (
-                  <a
-                    href={project.links.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-secondary"
-                  >
-                    <Github size={16} />
-                    GitHub
-                  </a>
-                )}
-                {project.links.demo && (
-                  <a
-                    href={project.links.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-secondary"
-                  >
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </a>
-                )}
-                {project.links.paper && (
-                  <a
-                    href={project.links.paper}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="btn-secondary"
-                  >
-                    <FileText size={16} />
-                    Paper
-                    <ArrowUpRight size={12} />
-                  </a>
-                )}
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    {project.links.github && (
+                      <a
+                        href={project.links.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn-secondary"
+                      >
+                        <Github size={16} />
+                        GitHub
+                      </a>
+                    )}
+                    {project.links.demo && (
+                      <a
+                        href={project.links.demo}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn-secondary"
+                      >
+                        <ExternalLink size={16} />
+                        Live Demo
+                      </a>
+                    )}
+                    {project.links.paper && (
+                      <a
+                        href={project.links.paper}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="btn-secondary"
+                      >
+                        <FileText size={16} />
+                        Paper
+                        <ArrowUpRight size={12} />
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                <div className="relative min-h-[280px] border-t border-hairline bg-canvas dark:border-hairline-dark dark:bg-canvas-dark lg:border-l lg:border-t-0">
+                  <ProjectGraphic />
+                </div>
               </div>
-            </div>
-
-            <div className="relative min-h-[280px] border-t border-hairline bg-canvas dark:border-hairline-dark dark:bg-canvas-dark lg:border-l lg:border-t-0">
-              <ProjectGraphic />
-            </div>
-          </div>
-        </motion.div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

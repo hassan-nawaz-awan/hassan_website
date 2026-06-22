@@ -1,17 +1,35 @@
-{
-  "title": "Aitomia",
-  "subtitle": "AI Agents for Computational Chemistry",
-  "description": "Aitomia is an intelligent, AI-driven platform designed to assist researchers in quantum chemistry and atomistic simulation. It integrates large language models, scientific workflows, and machine learning tools — including MLatom and AIQM methods — to streamline computational chemistry research, from input generation to result interpretation.",
-  "highlights": [
-    "LLM-guided workflow orchestration for quantum chemistry calculations",
-    "Integrated AIQM1/2/3 and machine learning interatomic potential methods",
-    "AI-enhanced conformer search via meta-dynamics, benchmarked against CREST",
-    "Designed to lower the barrier between a research question and a converged result"
-  ],
-  "image": "/images/aitomia-placeholder.svg",
-  "links": {
-    "github": "https://github.com/PLACEHOLDER/aitomia",
-    "paper": "",
-    "demo": "https://aitomistic.xyz"
+[
+  {
+    "title": "Aitomia",
+    "subtitle": "AI Agents for Computational Chemistry",
+    "description": "Aitomia is an intelligent, AI-driven platform designed to assist researchers in quantum chemistry and atomistic simulation. It integrates large language models, scientific workflows, and machine learning tools — including MLatom and AIQM methods — to streamline computational chemistry research, from input generation to result interpretation.",
+    "highlights": [
+      "LLM-guided workflow orchestration for quantum chemistry calculations",
+      "Integrated AIQM1/2/3 and machine learning interatomic potential methods",
+      "AI-enhanced conformer search via meta-dynamics, benchmarked against CREST",
+      "Designed to lower the barrier between a research question and a converged result"
+    ],
+    "image": "/images/aitomia-aitomia.png",
+    "links": {
+      "github": "https://github.com/dralgroup/aitomia/",
+      "paper": "https://pubs.acs.org/doi/10.1021/acs.jctc.6c00591",
+      "demo": "https://atom.xmu.edu.cn/login"
+    }
+  },
+  {
+    "title": "Accurate Machine learning Interatomic Potentials Exceeding DFT Accuracy",
+    "subtitle": "Confidential because unpublished",
+    "description": "Confidential because unpublished.",
+    "highlights": [
+      "Placeholder highlight 1",
+      "Placeholder highlight 2",
+      "Placeholder highlight 3"
+    ],
+    "image": "/images/aitomia-placeholder.svg",
+    "links": {
+      "github": "",
+      "paper": "",
+      "demo": ""
+    }
   }
-}
+]

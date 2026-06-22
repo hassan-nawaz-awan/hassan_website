@@ -1,11 +1,14 @@
 [
   {
     "id": "tl-0",
-    "period": "20XX — 20XX",
-    "title": "Secondary / High School Education",
-    "institution": "[Your School Name]",
-    "description": "Placeholder entry — replace with your real school name, years, and a one-line description if you'd like.",
-    "status": "complete",
+    "period": "2026-2030",
+    "title": "Ph.D. in Chemical and Biological Engineering",
+    "institution": "Hong Kong University of Science and Technology, Hong Kong",
+    "description": "Incoming doctoral research at the intersection of AI and chemistry, under the supervision of Hanyu Gao.",
+    "status": "Will be starting from September 2026",
+    "supervisor": "Prof. Hanyu Gao",
+    "thesisTitle": "--",
+    "grade": "--",
     "image": "",
     "gallery": [
       {
@@ -24,11 +27,14 @@
   },
   {
     "id": "tl-1",
-    "period": "2020 — 2024",
-    "title": "B.Sc. in Analytical Chemistry",
-    "institution": "University of Agriculture, Faisalabad",
-    "description": "Foundational training in chemical analysis, instrumentation, and laboratory methods.",
+    "period": "2024-2026",
+    "title": "Masters in Physical Chemistry",
+    "institution": "Xiamen University, China",
+    "description": "Research on automation of computational chemistry workflows with AI, and development of machine learning interatomic potentials, as a member of Prof. Pavlo Dral's group.",
     "status": "complete",
+    "supervisor": "Prof. Pavlo O. Dral",
+    "thesisTitle": "Exploring Automation and Acceleration of Computational Chemistry with Artificial Intelligence and Machine Learning Potentials ",
+    "grade": "CGPA: 3.93/4.0",
     "image": "",
     "gallery": [
       {
@@ -47,11 +53,14 @@
   },
   {
     "id": "tl-2",
-    "period": "2024 — 2026",
-    "title": "M.Sc. in AI & Machine Learning Enhanced Quantum and Computational Chemistry",
-    "institution": "Xiamen University, China",
-    "description": "Research on AI-enhanced conformer search and machine learning interatomic potentials, developed within the MLatom and Aitomia ecosystems, as a member of Prof. Pavlo Dral's group.",
-    "status": "current",
+    "period": "2020-2024",
+    "title": "Bachelor of Science in Analytical Chemistry",
+    "institution": "University of Agriculture, Faisalabad, Pakistan",
+    "description": "",
+    "status": "Complete",
+    "supervisor": "Dr.Raja Adil Sarfraz",
+    "thesisTitle": "Revolutionizing Quantum and Computational Chemistry with Artificial Intelligence: A Comprehensive Study.",
+    "grade": "CGPA: 3.71/4.0",
     "image": "",
     "gallery": [
       {
@@ -70,11 +79,12 @@
   },
   {
     "id": "tl-3",
-    "period": "2026 — ",
-    "title": "Ph.D. in Chemical and Biological Engineering",
-    "institution": "Hong Kong University of Science and Technology, Hong Kong",
-    "description": "Incoming doctoral research at the intersection of AI and chemistry.",
-    "status": "upcoming",
+    "period": "2018-2020 ",
+    "title": "Higher Secondary Education",
+    "institution": "Superior Group of Colleges, Shahkot, Pakistan",
+    "description": "FSc pre-medical studies, with a focus on chemistry, physics, and biology. Graduated with top marks and received the Merit Base Scholarship for Higher Achievers.",
+    "status": "Complete",
+    "grade": "Percentage: 89%",
     "image": "",
     "gallery": [
       {
@@ -93,11 +103,12 @@
   },
   {
     "id": "tl-4",
-    "period": "Future",
-    "title": "Professor & Research Group Leader",
-    "institution": "",
-    "description": "Building a research group at the intersection of artificial intelligence and chemistry.",
-    "status": "future",
+    "period": "2016-2018",
+    "title": "Matriculation and Secondary Education",
+    "institution": "The Educators Rdiant Campus Sangla Hill, A Project of Beaconhouse School System, Pakistan",
+    "description": "Matriculation and secondary education with a focus on science subjects. Graduated with top marks.",
+    "status": "Complete",
+    "grade": "Percentage: 94%",
     "image": "",
     "gallery": [
       {

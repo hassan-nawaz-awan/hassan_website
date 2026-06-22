@@ -113,6 +113,33 @@ export default function Timeline() {
                           </p>
                         )}
 
+                        <div className="mt-3 space-y-1">
+                          {item.supervisor && item.supervisor !== '--' && (
+                            <p className="text-sm text-ink-muted dark:text-ink-muted-dark">
+                              <span className="font-medium text-ink dark:text-ink-dark">
+                                Supervisor:
+                              </span>{' '}
+                              {item.supervisor}
+                            </p>
+                          )}
+                          {item.thesisTitle && item.thesisTitle !== '--' && (
+                            <p className="text-sm text-ink-muted dark:text-ink-muted-dark">
+                              <span className="font-medium text-ink dark:text-ink-dark">
+                                Thesis title:
+                              </span>{' '}
+                              {item.thesisTitle}
+                            </p>
+                          )}
+                          {item.grade && item.grade !== '--' && (
+                            <p className="text-sm text-ink-muted dark:text-ink-muted-dark">
+                              <span className="font-medium text-ink dark:text-ink-dark">
+                                Grade obtained:
+                              </span>{' '}
+                              {item.grade}
+                            </p>
+                          )}
+                        </div>
+
                         {gallery.length > 0 && (
                           <div className="mt-4 flex flex-wrap gap-2">
                             {gallery.map((img, idx) => (

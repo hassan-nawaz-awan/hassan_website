@@ -2,21 +2,27 @@
   "activeProjects": [
     {
       "id": "proj-1",
-      "name": "AI-Enhanced Conformer Search (MTD)",
-      "status": "Writing up",
-      "description": "Meta-dynamics-based conformer search implemented in MLatom, benchmarked against CREST, deployed on Aitomia."
+      "name": "Agentic platform for autonomous computational chemistry simulations",
+      "status": "Publised in Journal of Chemical Theory and Computation (JCTC)",
+      "description": "Development of an agentic platform for autonomous computational chemistry simulations."
     },
     {
       "id": "proj-2",
-      "name": "Water Cluster MLIP Training Data",
+      "name": "Development of accurate machine learning interatomic potential have accuracy exceeding standard density functional theory.",
       "status": "In progress",
-      "description": "OpenMM-driven generation of water cluster configurations (n = 2–60) with PBC lattice data for downstream AIQM/DFT single-point calculations."
+      "description": "Developing machine learning potentials capable of exceeding the standard density functional theory accuracy."
     },
     {
       "id": "proj-3",
-      "name": "Ambimodal Pericyclic Reaction Dynamics",
-      "status": "In progress",
-      "description": "Reproducing literature ambimodal pericyclic reactions using MLatom's uAIQM-optimal model and quasi-classical trajectory analysis."
+      "name": "Accurate prediction of heat of formations for organic molecules by introduing the anharmonicity in frequency calculations.",
+      "status": "Done without satidfied and pubslisable results",
+      "description": ""
+    },
+    {
+      "id": "proj-4",
+      "name": "Ensemble learning to make the predictions of machine learning interatomic potentials more robust and accurate. ",
+      "status": "Done without satidfied and pubslisable results",
+      "description": ""
     }
   ],
   "latestUpdates": [

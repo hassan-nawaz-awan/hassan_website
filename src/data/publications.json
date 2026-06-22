@@ -1,38 +1,35 @@
 [
   {
     "id": "pub-1",
-    "title": "AI-Enhanced Conformer Search via Meta-Dynamics: Benchmarking Against CREST",
+    "title": "Aitomia: An Agentic Framework for AI-Driven Atomistic and Quantum Chemical Simulations",
     "authors": ["Hassan", "Co-Author Name", "Pavlo O. Dral"],
-    "venue": "In preparation",
+    "venue": "Published in Journal of Chemical Theory and Computation (JCTC)",
     "year": 2026,
-    "type": "preprint",
-    "doi": "",
-    "pdf": "",
-    "abstract": "We introduce an AI-enhanced meta-dynamics (MTD) algorithm for conformational search, implemented within MLatom and deployed on the Aitomia platform, and benchmark it against CREST across a diverse set of molecular systems.",
+    "type": "Article  in Journal",
+    "doi": "10.1021/acs.jctc.6c00591",
+    "pdf": "https://pubs.acs.org/doi/pdf/10.1021/acs.jctc.6c00591",
     "tags": ["conformer search", "MLatom", "meta-dynamics", "AIQM"]
   },
   {
     "id": "pub-2",
-    "title": "Example: Reproducing Ambimodal Pericyclic Reaction Dynamics with Universal Machine Learning Potentials",
+    "title": "Placeholder: Reproducing Ambimodal Pericyclic Reaction Dynamics with Universal Machine Learning Potentials",
     "authors": ["Hassan", "Co-Author Name"],
-    "venue": "Example Journal of Computational Chemistry",
+    "venue": "Placeholder journal entry — update once the real paper is confirmed",
     "year": 2026,
     "type": "journal",
     "doi": "",
     "pdf": "",
-    "abstract": "Placeholder entry — replace with your real publication details. Demonstrates quasi-classical trajectory analysis of ambimodal pericyclic reactions using uAIQM-optimal potentials.",
     "tags": ["MLIP", "reaction dynamics", "AIQM"]
   },
   {
     "id": "pub-3",
-    "title": "Example: A Living Review Framework for Molecular Machine Learning Potentials",
+    "title": "Placeholder: A Living Review Framework for Molecular Machine Learning Potentials",
     "authors": ["Co-Author Name", "Hassan"],
-    "venue": "Example Conference on Machine Learning for Molecules",
+    "venue": "Placeholder conference entry — update once the real publication is confirmed",
     "year": 2025,
     "type": "conference",
     "doi": "",
     "pdf": "",
-    "abstract": "Placeholder entry — replace with your real publication details.",
     "tags": ["benchmarking", "RAG", "MLIP"]
   }
 ]
