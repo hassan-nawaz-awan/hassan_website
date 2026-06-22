@@ -26,55 +26,100 @@ export default function Conferences() {
 
         <div>
           <h2 className="section-heading mb-3">Conferences & talks</h2>
-          <p className="mb-10 max-w-xl text-sm text-ink-muted dark:text-ink-muted-dark">
+          <p className="mb-10 max-w-2xl text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
             Where I&rsquo;ve presented, attended, and met people doing
             similar work — with photos from along the way.
           </p>
 
-          <div className="grid gap-px overflow-hidden rounded-md border border-hairline bg-hairline dark:border-hairline-dark dark:bg-hairline-dark sm:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2">
             {conferences.map((conf, i) => {
               const images: GalleryImage[] = conf.images || [];
+              const featuredImage = images[0];
 
               return (
-                <motion.div
+                <motion.article
                   key={conf.id}
                   initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ duration: 0.45, delay: i * 0.06 }}
-                  className="bg-surface p-7 dark:bg-surface-dark"
+                  className="group overflow-hidden rounded-3xl border border-hairline bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-hairline-dark dark:bg-surface-dark"
                 >
-                  <p className="font-mono text-xs text-ink-muted dark:text-ink-muted-dark">
-                    {conf.year} · {conf.role}
-                  </p>
-                  <h3 className="mt-2 font-display text-lg text-ink dark:text-ink-dark">
-                    {conf.name}
-                  </h3>
-                  <p className="mt-2 text-sm text-ink-muted dark:text-ink-muted-dark">
-                    {conf.description}
-                  </p>
-
-                  {images.length > 0 && (
-                    <div className="mt-4 grid grid-cols-3 gap-2">
-                      {images.slice(0, 6).map((img, idx) => (
-                        <button
-                          key={img.src}
-                          type="button"
-                          onClick={() => openGallery(images, idx)}
-                          className="aspect-square overflow-hidden rounded-sm border border-hairline dark:border-hairline-dark"
-                          aria-label={`Open photo: ${img.caption || conf.name}`}
-                        >
-                          {/* eslint-disable-next-line @next/next/no-img-element */}
-                          <img
-                            src={withBasePath(img.src)}
-                            alt={img.caption || `${conf.name} photo ${idx + 1}`}
-                            className="h-full w-full object-cover transition-transform duration-500 hover:scale-105"
-                          />
-                        </button>
-                      ))}
-                    </div>
+                  {featuredImage && (
+                    <button
+                      type="button"
+                      onClick={() => openGallery(images, 0)}
+                      className="relative block w-full overflow-hidden"
+                      aria-label={`Open gallery for ${conf.name}`}
+                    >
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={withBasePath(featuredImage.src)}
+                        alt={featuredImage.caption || conf.name}
+                        className="h-60 w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/78 via-black/18 to-black/5" />
+                      <div className="absolute inset-x-0 top-0 flex items-center justify-between p-4">
+                        <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+                          {conf.year}
+                        </span>
+                        {images.length > 0 && (
+                          <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+                            {images.length} photos
+                          </span>
+                        )}
+                      </div>
+                      <div className="absolute inset-x-0 bottom-0 p-5">
+                        <div className="max-w-xs rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-sm">
+                          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/80">
+                            Featured event
+                          </p>
+                          <p className="mt-1 text-sm font-medium text-white">
+                            {conf.location}
+                          </p>
+                        </div>
+                      </div>
+                    </button>
                   )}
-                </motion.div>
+
+                  <div className="p-6">
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span className="pill">{conf.role}</span>
+                      {conf.location && (
+                        <span className="font-mono text-[11px] uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark">
+                          {conf.location}
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="mt-3 font-display text-2xl leading-tight text-ink dark:text-ink-dark">
+                      {conf.name}
+                    </h3>
+                    <p className="mt-3 text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
+                      {conf.description}
+                    </p>
+
+                    {images.length > 0 && (
+                      <div className="mt-5 grid grid-cols-3 gap-2">
+                        {images.slice(0, 6).map((img, idx) => (
+                          <button
+                            key={img.src}
+                            type="button"
+                            onClick={() => openGallery(images, idx)}
+                            className="aspect-square overflow-hidden rounded-xl border border-hairline transition-transform duration-200 hover:-translate-y-0.5 dark:border-hairline-dark"
+                            aria-label={`Open photo: ${img.caption || conf.name}`}
+                          >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
+                            <img
+                              src={withBasePath(img.src)}
+                              alt={img.caption || `${conf.name} photo ${idx + 1}`}
+                              className="h-full w-full object-cover"
+                            />
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </motion.article>
               );
             })}
           </div>
