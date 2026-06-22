@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Camera, MapPin, Trophy, Video } from 'lucide-react';
 import { motion } from 'framer-motion';
 import conferences from '@/data/conferences.json';
 import { withBasePath } from '@/lib/utils';
@@ -11,6 +12,14 @@ export default function Conferences() {
     null
   );
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const totalPhotos = conferences.reduce(
+    (sum, conf) => sum + (conf.images?.length || 0),
+    0
+  );
+  const awardCount = conferences.filter((conf) =>
+    conf.role.toLowerCase().includes('award')
+  ).length;
 
   const openGallery = (images: GalleryImage[], index: number) => {
     setActiveGallery(images);
@@ -25,13 +34,48 @@ export default function Conferences() {
         </div>
 
         <div>
-          <h2 className="section-heading mb-3">Conferences & talks</h2>
-          <p className="mb-10 max-w-2xl text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
-            Where I&rsquo;ve presented, attended, and met people doing
-            similar work — with photos from along the way.
-          </p>
+          <div className="mb-8 rounded-3xl border border-hairline bg-surface/95 p-6 shadow-sm dark:border-hairline-dark dark:bg-surface-dark/90">
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <span className="eyebrow">10 — Conferences</span>
+                <h2 className="section-heading mt-3">Conferences & talks</h2>
+                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
+                  Selected moments from the world stage, featuring invited talks,
+                  posters, workshop events, and the people who made them
+                  memorable.
+                </p>
+              </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-3 sm:grid-cols-2">
+                <div className="rounded-3xl border border-hairline bg-canvas p-4 text-sm dark:border-hairline-dark dark:bg-canvas-dark">
+                  <p className="text-ink-muted dark:text-ink-muted-dark">Total events</p>
+                  <p className="mt-2 text-3xl font-semibold text-ink dark:text-ink-dark">
+                    {conferences.length}
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-hairline bg-canvas p-4 text-sm dark:border-hairline-dark dark:bg-canvas-dark">
+                  <p className="text-ink-muted dark:text-ink-muted-dark">Event photos</p>
+                  <p className="mt-2 text-3xl font-semibold text-ink dark:text-ink-dark">
+                    {totalPhotos}
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-hairline bg-canvas p-4 text-sm dark:border-hairline-dark dark:bg-canvas-dark">
+                  <p className="text-ink-muted dark:text-ink-muted-dark">Awards / honors</p>
+                  <p className="mt-2 text-3xl font-semibold text-ink dark:text-ink-dark">
+                    {awardCount}
+                  </p>
+                </div>
+                <div className="rounded-3xl border border-hairline bg-canvas p-4 text-sm dark:border-hairline-dark dark:bg-canvas-dark">
+                  <p className="text-ink-muted dark:text-ink-muted-dark">Talk formats</p>
+                  <p className="mt-2 text-3xl font-semibold text-ink dark:text-ink-dark">
+                    {conferences.filter((conf) => conf.role.toLowerCase().includes('poster')).length} posters
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-8 lg:grid-cols-2">
             {conferences.map((conf, i) => {
               const images: GalleryImage[] = conf.images || [];
               const featuredImage = images[0];
@@ -91,7 +135,17 @@ export default function Conferences() {
                         </span>
                       )}
                     </div>
-                    <h3 className="mt-3 font-display text-2xl leading-tight text-ink dark:text-ink-dark">
+                    <div className="mt-5 flex flex-wrap items-center gap-2 text-sm text-ink-muted dark:text-ink-muted-dark">
+                      <span className="inline-flex items-center gap-2 rounded-full border border-hairline px-3 py-1 text-xs uppercase tracking-[0.2em] dark:border-hairline-dark">
+                        <MapPin size={12} />
+                        {conf.location}
+                      </span>
+                      <span className="inline-flex items-center gap-2 rounded-full border border-hairline px-3 py-1 text-xs uppercase tracking-[0.2em] dark:border-hairline-dark">
+                        <Video size={12} />
+                        {conf.role}
+                      </span>
+                    </div>
+                    <h3 className="mt-4 font-display text-2xl leading-tight text-ink dark:text-ink-dark">
                       {conf.name}
                     </h3>
                     <p className="mt-3 text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
@@ -99,13 +153,13 @@ export default function Conferences() {
                     </p>
 
                     {images.length > 0 && (
-                      <div className="mt-5 grid grid-cols-3 gap-2">
+                      <div className="mt-6 grid grid-cols-3 gap-3">
                         {images.slice(0, 6).map((img, idx) => (
                           <button
                             key={img.src}
                             type="button"
                             onClick={() => openGallery(images, idx)}
-                            className="aspect-square overflow-hidden rounded-xl border border-hairline transition-transform duration-200 hover:-translate-y-0.5 dark:border-hairline-dark"
+                            className="aspect-square overflow-hidden rounded-3xl border border-hairline transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg dark:border-hairline-dark"
                             aria-label={`Open photo: ${img.caption || conf.name}`}
                           >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
