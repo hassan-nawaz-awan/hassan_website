@@ -7,7 +7,20 @@
     "description": "Placeholder entry — replace with your real school name, years, and a one-line description if you'd like.",
     "status": "complete",
     "image": "",
-    "gallery": []
+    "gallery": [
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-1.svg",
+        "caption": "Placeholder — replace with a real school photo or event image."
+      },
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-2.svg",
+        "caption": "Placeholder — replace with a real school photo or event image."
+      },
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-3.svg",
+        "caption": "Placeholder — replace with a real school photo or event image."
+      }
+    ]
   },
   {
     "id": "tl-1",
@@ -17,7 +30,20 @@
     "description": "Foundational training in chemical analysis, instrumentation, and laboratory methods.",
     "status": "complete",
     "image": "",
-    "gallery": []
+    "gallery": [
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-1.svg",
+        "caption": "Placeholder — replace with a real lab, class, or campus photo."
+      },
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-2.svg",
+        "caption": "Placeholder — replace with a real lab, class, or campus photo."
+      },
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-3.svg",
+        "caption": "Placeholder — replace with a real lab, class, or campus photo."
+      }
+    ]
   },
   {
     "id": "tl-2",
@@ -46,11 +72,24 @@
     "id": "tl-3",
     "period": "2026 — ",
     "title": "Ph.D. in Chemical and Biological Engineering",
-    "institution": "Hong Kong University of Science and Technology",
+    "institution": "Hong Kong University of Science and Technology, Hong Kong",
     "description": "Incoming doctoral research at the intersection of AI and chemistry.",
     "status": "upcoming",
     "image": "",
-    "gallery": []
+    "gallery": [
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-1.svg",
+        "caption": "Placeholder — replace with a real campus, lab, or event photo."
+      },
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-2.svg",
+        "caption": "Placeholder — replace with a real campus, lab, or event photo."
+      },
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-3.svg",
+        "caption": "Placeholder — replace with a real campus, lab, or event photo."
+      }
+    ]
   },
   {
     "id": "tl-4",
@@ -60,6 +99,19 @@
     "description": "Building a research group at the intersection of artificial intelligence and chemistry.",
     "status": "future",
     "image": "",
-    "gallery": []
+    "gallery": [
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-1.svg",
+        "caption": "Placeholder — replace with a real research, seminar, or team photo."
+      },
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-2.svg",
+        "caption": "Placeholder — replace with a real research, seminar, or team photo."
+      },
+      {
+        "src": "/images/timeline/pavlo-group-placeholder-3.svg",
+        "caption": "Placeholder — replace with a real research, seminar, or team photo."
+      }
+    ]
   }
 ]
