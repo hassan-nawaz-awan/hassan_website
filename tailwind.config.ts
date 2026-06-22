@@ -10,32 +10,35 @@ const config: Config = {
     extend: {
       colors: {
         canvas: {
-          DEFAULT: '#F5F6F8',
-          dark: '#0B0E14',
+          DEFAULT: '#F8FAFF',
+          dark: '#080C18',
         },
         surface: {
           DEFAULT: '#FFFFFF',
-          dark: '#11151D',
+          dark: '#111827',
         },
         ink: {
-          DEFAULT: '#12151C',
-          muted: '#5B6472',
-          dark: '#E7EAF0',
-          'muted-dark': '#8A93A6',
+          DEFAULT: '#111827',
+          muted: '#4F5665',
+          dark: '#F8FAFC',
+          'muted-dark': '#CBD5E1',
         },
         hairline: {
-          DEFAULT: '#E3E5EA',
-          dark: '#222836',
+          DEFAULT: '#E6E8F0',
+          dark: '#2F3A54',
         },
         accent: {
-          DEFAULT: '#0E7C86',
-          light: '#11949F',
-          dark: '#2DD4C9',
+          DEFAULT: '#4338CA',
+          light: '#6366F1',
+          dark: '#A5B4FC',
         },
         ember: {
           DEFAULT: '#C2660E',
           dark: '#F2A65A',
         },
+      },
+      boxShadow: {
+        card: '0 24px 80px rgba(15, 23, 42, 0.12)',
       },
       fontFamily: {
         display: ['var(--font-display)', 'Georgia', 'serif'],

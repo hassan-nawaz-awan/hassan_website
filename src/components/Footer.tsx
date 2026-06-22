@@ -5,7 +5,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="hairline-rule">
+    <footer className="hairline-rule bg-canvas/95 dark:bg-canvas-dark/95">
       <div className="container-content flex flex-col items-start justify-between gap-4 py-10 text-sm text-ink-muted dark:text-ink-muted-dark sm:flex-row sm:items-center">
         <p>
           © {year} {profile.name}. Built with Next.js, deployed on GitHub

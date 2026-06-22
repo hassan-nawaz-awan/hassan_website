@@ -36,7 +36,7 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative overflow-hidden border-b border-hairline dark:border-hairline-dark"
+      className="relative overflow-hidden border-b border-hairline bg-hero-fade dark:border-hairline-dark dark:bg-slate-950/90"
     >
       <motion.div style={{ y: bgY }} className="absolute inset-0">
         <MolecularBackground />
@@ -46,6 +46,9 @@ export default function Hero() {
         style={{ y: contentY, opacity: contentOpacity }}
         className="container-content relative grid min-h-[88vh] gap-12 py-28 lg:grid-cols-[1.08fr_0.92fr] lg:items-center"
       >
+        <div className="pointer-events-none absolute inset-x-0 top-6 hidden h-72 overflow-hidden lg:block">
+          <div className="absolute left-[12%] top-0 h-80 w-[56rem] -translate-x-1/2 rounded-full bg-accent/12 blur-3xl" />
+        </div>
         <div>
           <motion.p
             variants={fadeUp}
@@ -62,7 +65,7 @@ export default function Hero() {
             initial="hidden"
             animate="show"
             custom={1}
-            className="max-w-3xl font-display text-5xl leading-[1.02] text-ink dark:text-ink-dark sm:text-6xl lg:text-7xl"
+            className="max-w-3xl font-display text-5xl leading-[1.02] text-ink dark:text-ink-dark sm:text-6xl lg:text-[5.25rem]"
           >
             {profile.name}
           </motion.h1>

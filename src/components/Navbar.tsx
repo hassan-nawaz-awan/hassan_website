@@ -11,11 +11,11 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-hairline bg-canvas/80 backdrop-blur-xl dark:border-hairline-dark dark:bg-canvas-dark/80">
+    <header className="sticky top-0 z-50 border-b border-hairline/80 bg-canvas/95 backdrop-blur-2xl shadow-sm transition-colors duration-300 dark:border-hairline-dark/70 dark:bg-canvas-dark/95">
       <nav className="container-content flex h-16 items-center justify-between">
         <Link
           href="/"
-          className="font-display text-lg italic tracking-wide text-ink dark:text-ink-dark"
+          className="font-display text-lg font-semibold tracking-[0.16em] uppercase text-ink dark:text-ink-dark"
         >
           {profile.name}
         </Link>
@@ -25,7 +25,7 @@ export default function Navbar() {
             <Link
               key={item.href}
               href={item.href}
-              className="link-underline text-sm tracking-wide"
+              className="link-underline text-sm font-medium tracking-[0.12em]"
             >
               {item.label}
             </Link>
@@ -39,7 +39,7 @@ export default function Navbar() {
             type="button"
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((v) => !v)}
-            className="flex h-9 w-9 items-center justify-center rounded-md border border-hairline bg-surface dark:border-hairline-dark dark:bg-surface-dark"
+            className="flex h-11 w-11 items-center justify-center rounded-2xl border border-hairline/80 bg-surface shadow-sm transition-all duration-200 dark:border-hairline-dark dark:bg-surface-dark"
           >
             {open ? <X size={16} /> : <Menu size={16} />}
           </button>

@@ -30,7 +30,7 @@ export default function About() {
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.5 }}
             >
-              <div className="aspect-[4/5] w-full max-w-[220px] overflow-hidden rounded-2xl border border-hairline bg-surface shadow-sm dark:border-hairline-dark dark:bg-surface-dark">
+              <div className="aspect-[4/5] w-full max-w-[240px] overflow-hidden rounded-[2rem] border border-hairline bg-surface shadow-card dark:border-hairline-dark dark:bg-surface-dark">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={withBasePath(profile.photo)}
@@ -40,7 +40,7 @@ export default function About() {
               </div>
             </motion.div>
 
-            <div className="space-y-5 text-[17px] leading-7 text-ink-muted dark:text-ink-muted-dark">
+            <div className="space-y-5 text-[18px] leading-8 text-ink-muted dark:text-ink-muted-dark">
               {profile.about.paragraphs.map((p, i) => (
                 <motion.p
                   key={i}
@@ -76,7 +76,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.5, delay: 0.1 * index }}
-                className="rounded-2xl border border-hairline bg-surface p-4 shadow-sm dark:border-hairline-dark dark:bg-surface-dark"
+                className="rounded-[1.75rem] border border-hairline bg-surface p-6 shadow-sm dark:border-hairline-dark dark:bg-surface-dark"
               >
                 <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-ink-muted dark:text-ink-muted-dark">
                   {item.label}
@@ -93,7 +93,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-10 rounded-r-xl border-l-2 border-accent bg-accent/5 py-4 pl-5 pr-4 dark:border-accent-dark dark:bg-accent-dark/5"
+            className="mt-10 rounded-[1.5rem] border-l-4 border-accent bg-accent/10 p-6 dark:border-accent-dark dark:bg-accent-dark/10"
           >
             <p className="font-display text-lg italic text-ink dark:text-ink-dark">
               &ldquo;{profile.careerGoal}&rdquo;
