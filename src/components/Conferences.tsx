@@ -13,14 +13,6 @@ export default function Conferences() {
   );
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const totalPhotos = conferences.reduce(
-    (sum, conf) => sum + (conf.images?.length || 0),
-    0
-  );
-  const awardCount = conferences.filter((conf) =>
-    conf.role.toLowerCase().includes('award')
-  ).length;
-
   const openGallery = (images: GalleryImage[], index: number) => {
     setActiveGallery(images);
     setActiveIndex(index);
@@ -34,46 +26,11 @@ export default function Conferences() {
         </div>
 
         <div>
-          <div className="mb-8 rounded-3xl border border-hairline bg-surface/95 p-6 shadow-sm dark:border-hairline-dark dark:bg-surface-dark/90">
-            <div className="flex flex-wrap items-start justify-between gap-4">
-              <div>
-                <span className="eyebrow">10 — Conferences</span>
-                <h2 className="section-heading mt-3">Conferences & talks</h2>
-                <p className="mt-4 max-w-2xl text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
-                  Selected moments from the world stage, featuring invited talks,
-                  posters, workshop events, and the people who made them
-                  memorable.
-                </p>
-              </div>
-
-              <div className="grid gap-3 sm:grid-cols-2">
-                <div className="rounded-3xl border border-hairline bg-canvas p-4 text-sm dark:border-hairline-dark dark:bg-canvas-dark">
-                  <p className="text-ink-muted dark:text-ink-muted-dark">Total events</p>
-                  <p className="mt-2 text-3xl font-semibold text-ink dark:text-ink-dark">
-                    {conferences.length}
-                  </p>
-                </div>
-                <div className="rounded-3xl border border-hairline bg-canvas p-4 text-sm dark:border-hairline-dark dark:bg-canvas-dark">
-                  <p className="text-ink-muted dark:text-ink-muted-dark">Event photos</p>
-                  <p className="mt-2 text-3xl font-semibold text-ink dark:text-ink-dark">
-                    {totalPhotos}
-                  </p>
-                </div>
-                <div className="rounded-3xl border border-hairline bg-canvas p-4 text-sm dark:border-hairline-dark dark:bg-canvas-dark">
-                  <p className="text-ink-muted dark:text-ink-muted-dark">Awards / honors</p>
-                  <p className="mt-2 text-3xl font-semibold text-ink dark:text-ink-dark">
-                    {awardCount}
-                  </p>
-                </div>
-                <div className="rounded-3xl border border-hairline bg-canvas p-4 text-sm dark:border-hairline-dark dark:bg-canvas-dark">
-                  <p className="text-ink-muted dark:text-ink-muted-dark">Talk formats</p>
-                  <p className="mt-2 text-3xl font-semibold text-ink dark:text-ink-dark">
-                    {conferences.filter((conf) => conf.role.toLowerCase().includes('poster')).length} posters
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h2 className="section-heading mb-6">Conferences & talks</h2>
+          <p className="mb-12 max-w-2xl text-sm leading-relaxed text-ink-muted dark:text-ink-muted-dark">
+            Professional conference highlights with a focus on presentation impact,
+            meaningful collaborations, and high-quality event photography.
+          </p>
 
           <div className="grid gap-8 lg:grid-cols-2">
             {conferences.map((conf, i) => {
@@ -135,7 +92,7 @@ export default function Conferences() {
                         </span>
                       )}
                     </div>
-                    <div className="mt-5 flex flex-wrap items-center gap-2 text-sm text-ink-muted dark:text-ink-muted-dark">
+                    <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-ink-muted dark:text-ink-muted-dark">
                       <span className="inline-flex items-center gap-2 rounded-full border border-hairline px-3 py-1 text-xs uppercase tracking-[0.2em] dark:border-hairline-dark">
                         <MapPin size={12} />
                         {conf.location}
@@ -144,6 +101,12 @@ export default function Conferences() {
                         <Video size={12} />
                         {conf.role}
                       </span>
+                      {images.length > 0 && (
+                        <span className="inline-flex items-center gap-2 rounded-full border border-hairline px-3 py-1 text-xs uppercase tracking-[0.2em] dark:border-hairline-dark">
+                          <Camera size={12} />
+                          {images.length} photos
+                        </span>
+                      )}
                     </div>
                     <h3 className="mt-4 font-display text-2xl leading-tight text-ink dark:text-ink-dark">
                       {conf.name}
