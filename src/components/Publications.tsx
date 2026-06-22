@@ -14,12 +14,24 @@ const filters: { label: string; value: PubType }[] = [
   { label: 'Conference', value: 'conference' },
 ];
 
+const isPlaceholderPublication = (pub: (typeof publications)[number]) => {
+  const title = pub.title.toLowerCase();
+  const venue = pub.venue.toLowerCase();
+
+  return (
+    Boolean((pub as { isPlaceholder?: boolean }).isPlaceholder) ||
+    title.startsWith('placeholder') ||
+    venue.includes('placeholder')
+  );
+};
+
 export default function Publications() {
   const [query, setQuery] = useState('');
   const [type, setType] = useState<PubType>('all');
 
   const filtered = useMemo(() => {
     return publications
+      .filter((p) => !isPlaceholderPublication(p))
       .filter((p) => (type === 'all' ? true : p.type === type))
       .filter((p) => {
         if (!query.trim()) return true;
