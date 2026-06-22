@@ -3,33 +3,11 @@
     "id": "pub-1",
     "title": "Aitomia: An Agentic Framework for AI-Driven Atomistic and Quantum Chemical Simulations",
     "authors": ["Hassan", "Co-Author Name", "Pavlo O. Dral"],
-    "venue": "Published in Journal of Chemical Theory and Computation (JCTC)",
+    "venue": "Journal of Chemical Theory and Computation (JCTC)",
     "year": 2026,
-    "type": "Article  in Journal",
+    "type": "journal",
     "doi": "10.1021/acs.jctc.6c00591",
     "pdf": "https://pubs.acs.org/doi/pdf/10.1021/acs.jctc.6c00591",
     "tags": ["conformer search", "MLatom", "meta-dynamics", "AIQM"]
-  },
-  {
-    "id": "pub-2",
-    "title": "Placeholder: Reproducing Ambimodal Pericyclic Reaction Dynamics with Universal Machine Learning Potentials",
-    "authors": ["Hassan", "Co-Author Name"],
-    "venue": "Placeholder journal entry — update once the real paper is confirmed",
-    "year": 2026,
-    "type": "journal",
-    "doi": "",
-    "pdf": "",
-    "tags": ["MLIP", "reaction dynamics", "AIQM"]
-  },
-  {
-    "id": "pub-3",
-    "title": "Placeholder: A Living Review Framework for Molecular Machine Learning Potentials",
-    "authors": ["Co-Author Name", "Hassan"],
-    "venue": "Placeholder conference entry — update once the real publication is confirmed",
-    "year": 2025,
-    "type": "conference",
-    "doi": "",
-    "pdf": "",
-    "tags": ["benchmarking", "RAG", "MLIP"]
   }
 ]
