@@ -50,7 +50,7 @@ export default function Metrics() {
           {items.map((item) => (
             <div key={item.label}>
               <Counter value={item.value} />
-              <p className="mt-2 font-mono text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark">
+              <p className="mt-2 font-sans text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark">
                 {item.label}
               </p>
             </div>

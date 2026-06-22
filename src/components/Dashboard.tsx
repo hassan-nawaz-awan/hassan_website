@@ -47,7 +47,7 @@ export default function Dashboard() {
                 {dashboard.activeProjects.map((p) => (
                   <li
                     key={p.id}
-                    className="rounded-xl border border-hairline bg-canvas/60 p-4 transition-colors duration-200 hover:border-accent/40 dark:border-hairline-dark dark:bg-canvas-dark/60 dark:hover:border-accent-dark/40"
+                    className="rounded-sm border border-hairline bg-canvas/60 p-4 transition-colors duration-200 hover:border-accent/40 dark:border-hairline-dark dark:bg-canvas-dark/60 dark:hover:border-accent-dark/40"
                   >
                     <div className="flex items-start gap-3">
                       <div className="min-w-0 flex-1">
@@ -61,7 +61,7 @@ export default function Dashboard() {
                         )}
                       </div>
                       <span
-                        className={`inline-flex max-w-[170px] whitespace-normal break-words rounded-full border px-2.5 py-1 text-center font-mono text-[10px] uppercase tracking-[0.16em] ${getStatusStyle(p.status)}`}
+                        className={`inline-flex max-w-[170px] whitespace-normal break-words rounded-sm border px-2.5 py-1 text-center font-sans text-[10px] uppercase tracking-[0.16em] ${getStatusStyle(p.status)}`}
                       >
                         {p.status}
                       </span>
@@ -86,12 +86,12 @@ export default function Dashboard() {
                 {recentPubs.map((p) => (
                   <li
                     key={p.id}
-                    className="rounded-xl border border-hairline bg-canvas/50 p-3 transition-colors duration-200 hover:border-accent/40 dark:border-hairline-dark dark:bg-canvas-dark/50 dark:hover:border-accent-dark/40"
+                    className="rounded-sm border border-hairline bg-canvas/50 p-3 transition-colors duration-200 hover:border-accent/40 dark:border-hairline-dark dark:bg-canvas-dark/50 dark:hover:border-accent-dark/40"
                   >
                     <p className="text-sm leading-snug text-ink dark:text-ink-dark">
                       {p.title}
                     </p>
-                    <p className="mt-1 font-mono text-xs text-ink-muted dark:text-ink-muted-dark">
+                    <p className="mt-1 font-sans text-xs text-ink-muted dark:text-ink-muted-dark">
                       {p.venue} · {p.year}
                     </p>
                   </li>
@@ -103,7 +103,7 @@ export default function Dashboard() {
               <ul className="space-y-3">
                 {dashboard.latestUpdates.map((u) => (
                   <li key={u.id} className="flex gap-3 text-sm">
-                    <span className="mt-0.5 shrink-0 font-mono text-xs text-ink-muted dark:text-ink-muted-dark">
+                    <span className="mt-0.5 shrink-0 font-sans text-xs text-ink-muted dark:text-ink-muted-dark">
                       {u.date}
                     </span>
                     <span className="leading-relaxed text-ink-muted dark:text-ink-muted-dark">
@@ -135,13 +135,13 @@ function Panel({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-60px' }}
       transition={{ duration: 0.5 }}
-      className="rounded-2xl border border-hairline bg-surface/90 p-6 shadow-sm transition-all duration-300 dark:border-hairline-dark dark:bg-surface-dark/90"
+      className="rounded-sm border border-hairline bg-surface/90 p-6 shadow-sm transition-all duration-300 dark:border-hairline-dark dark:bg-surface-dark/90"
     >
       <div className="mb-5 flex items-center gap-2.5">
-        <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent/5 text-accent dark:bg-accent-dark/10 dark:text-accent-dark">
+        <span className="flex h-9 w-9 items-center justify-center rounded-sm bg-accent/5 text-accent dark:bg-accent-dark/10 dark:text-accent-dark">
           <Icon size={16} strokeWidth={1.5} />
         </span>
-        <h3 className="font-mono text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark">
+        <h3 className="font-sans text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark">
           {title}
         </h3>
       </div>

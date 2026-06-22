@@ -98,7 +98,7 @@ export default function Timeline() {
                       )}
 
                       <div className="sm:order-1">
-                        <p className="font-mono text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark">
+                        <p className="font-sans text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark">
                           {item.period} · {statusLabel[item.status]}
                         </p>
                         <h3 className="mt-1.5 font-display text-xl text-ink dark:text-ink-dark">

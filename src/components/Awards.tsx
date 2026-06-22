@@ -44,7 +44,7 @@ export default function Awards() {
                   <h3 className="font-display text-lg text-ink dark:text-ink-dark">
                     {award.title}
                   </h3>
-                  <span className="font-mono text-xs text-ink-muted dark:text-ink-muted-dark">
+                  <span className="font-sans text-xs text-ink-muted dark:text-ink-muted-dark">
                     {award.year}
                   </span>
                 </div>

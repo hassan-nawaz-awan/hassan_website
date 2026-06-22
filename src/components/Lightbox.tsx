@@ -125,7 +125,7 @@ export default function Lightbox({
               </p>
             )}
             {images.length > 1 && (
-              <p className="mt-2 font-mono text-xs text-white/40">
+              <p className="mt-2 font-sans text-xs text-white/40">
                 {index + 1} / {images.length}
               </p>
             )}

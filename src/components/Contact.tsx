@@ -87,7 +87,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="name"
-                className="font-mono text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark"
+                className="font-sans text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark"
               >
                 Name
               </label>
@@ -102,7 +102,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="email"
-                className="font-mono text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark"
+                className="font-sans text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark"
               >
                 Email
               </label>
@@ -118,7 +118,7 @@ export default function Contact() {
             <div>
               <label
                 htmlFor="message"
-                className="font-mono text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark"
+                className="font-sans text-xs uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark"
               >
                 Message
               </label>

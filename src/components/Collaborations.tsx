@@ -30,7 +30,7 @@ export default function Collaborations() {
                 className="flex gap-4 bg-surface p-7 dark:bg-surface-dark"
               >
                 {c.image ? (
-                  <div className="h-14 w-14 shrink-0 overflow-hidden rounded-full border border-hairline dark:border-hairline-dark">
+                  <div className="h-14 w-14 shrink-0 overflow-hidden rounded-sm border border-hairline dark:border-hairline-dark">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={withBasePath(c.image)}
@@ -39,7 +39,7 @@ export default function Collaborations() {
                     />
                   </div>
                 ) : (
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-hairline text-accent dark:border-hairline-dark dark:text-accent-dark">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-sm border border-hairline text-accent dark:border-hairline-dark dark:text-accent-dark">
                     <Handshake size={20} strokeWidth={1.5} />
                   </div>
                 )}
@@ -48,7 +48,7 @@ export default function Collaborations() {
                   <h3 className="font-display text-lg text-ink dark:text-ink-dark">
                     {c.name}
                   </h3>
-                  <p className="text-xs font-mono uppercase tracking-wide text-accent dark:text-accent-dark">
+                  <p className="text-xs font-sans uppercase tracking-wide text-accent dark:text-accent-dark">
                     {c.role}
                     {c.institution ? ` · ${c.institution}` : ''}
                   </p>

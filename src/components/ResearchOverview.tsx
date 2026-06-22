@@ -25,7 +25,7 @@ export default function ResearchOverview() {
             chemistry?
           </h2>
 
-          <div className="grid gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline dark:border-hairline-dark dark:bg-hairline-dark sm:grid-cols-2">
+          <div className="grid gap-px overflow-hidden rounded-sm border border-hairline bg-hairline dark:border-hairline-dark dark:bg-hairline-dark sm:grid-cols-2">
             {researchAreas.map((area, i) => {
               const Icon = iconMap[area.icon] ?? Atom;
               return (

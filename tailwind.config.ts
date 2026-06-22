@@ -10,35 +10,40 @@ const config: Config = {
     extend: {
       colors: {
         canvas: {
-          DEFAULT: '#F8FAFF',
-          dark: '#080C18',
+          DEFAULT: '#F6F1E7',
+          dark: '#0A0D13',
         },
         surface: {
           DEFAULT: '#FFFFFF',
-          dark: '#111827',
+          dark: '#12161F',
         },
         ink: {
-          DEFAULT: '#111827',
-          muted: '#4F5665',
-          dark: '#F8FAFC',
-          'muted-dark': '#CBD5E1',
+          DEFAULT: '#1B1B18',
+          muted: '#5C5747',
+          dark: '#F2EEE3',
+          'muted-dark': '#AFA999',
         },
         hairline: {
-          DEFAULT: '#E6E8F0',
-          dark: '#2F3A54',
+          DEFAULT: '#D8CFB8',
+          dark: '#2A2F3D',
         },
         accent: {
-          DEFAULT: '#4338CA',
-          light: '#6366F1',
-          dark: '#A5B4FC',
+          DEFAULT: '#7A2230',
+          light: '#9C2E3F',
+          dark: '#E2A4AC',
         },
         ember: {
-          DEFAULT: '#C2660E',
-          dark: '#F2A65A',
+          DEFAULT: '#8A6A2A',
+          dark: '#D9B36C',
+        },
+        masthead: {
+          DEFAULT: '#0A0D13',
+          ink: '#F2EEE3',
+          line: '#3A3F4D',
         },
       },
       boxShadow: {
-        card: '0 16px 48px rgba(15, 23, 42, 0.08)',
+        card: '0 12px 32px rgba(20, 16, 8, 0.06)',
       },
       fontFamily: {
         display: ['var(--font-display)', 'Georgia', 'serif'],

@@ -59,7 +59,7 @@ export default function Publications() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search publications…"
-                className="w-full rounded-full border border-hairline bg-surface py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-muted focus:border-accent dark:border-hairline-dark dark:bg-surface-dark dark:text-ink-dark dark:placeholder:text-ink-muted-dark sm:w-64"
+                className="w-full rounded-sm border border-hairline bg-surface py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-muted focus:border-accent dark:border-hairline-dark dark:bg-surface-dark dark:text-ink-dark dark:placeholder:text-ink-muted-dark sm:w-64"
               />
             </div>
           </div>
@@ -70,11 +70,11 @@ export default function Publications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.5 }}
-              className="mb-8 rounded-2xl border border-accent/15 bg-accent/5 p-6 dark:border-accent-dark/15 dark:bg-accent-dark/5"
+              className="mb-8 rounded-sm border border-accent/15 bg-accent/5 p-6 dark:border-accent-dark/15 dark:bg-accent-dark/5"
             >
               <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div>
-                  <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-accent dark:text-accent-dark">
+                  <p className="font-sans text-[10px] uppercase tracking-[0.24em] text-accent dark:text-accent-dark">
                     Featured paper
                   </p>
                   <h3 className="mt-2 font-display text-2xl text-ink dark:text-ink-dark">
@@ -119,7 +119,7 @@ export default function Publications() {
               <button
                 key={f.value}
                 onClick={() => setType(f.value)}
-                className={`rounded-full border px-3.5 py-1.5 font-mono text-xs uppercase tracking-wide transition-colors ${
+                className={`rounded-sm border px-3.5 py-1.5 font-sans text-xs uppercase tracking-wide transition-colors ${
                   type === f.value
                     ? 'border-accent bg-accent text-white dark:border-accent-dark dark:bg-accent-dark dark:text-canvas-dark'
                     : 'border-hairline text-ink-muted hover:border-accent hover:text-accent dark:border-hairline-dark dark:text-ink-muted-dark dark:hover:border-accent-dark dark:hover:text-accent-dark'
@@ -143,7 +143,7 @@ export default function Publications() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.4, delay: Math.min(i, 6) * 0.05 }}
-                  className="rounded-2xl border border-hairline bg-surface p-6 shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-hairline-dark dark:bg-surface-dark"
+                  className="rounded-sm border border-hairline bg-surface p-6 shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-hairline-dark dark:bg-surface-dark"
                 >
                   <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
                     <div>
@@ -154,7 +154,7 @@ export default function Publications() {
                         {pub.authors.join(', ')}
                       </p>
                     </div>
-                    <span className="font-mono text-xs text-ink-muted dark:text-ink-muted-dark">
+                    <span className="font-sans text-xs text-ink-muted dark:text-ink-muted-dark">
                       {pub.year}
                     </span>
                   </div>
@@ -167,7 +167,7 @@ export default function Publications() {
                     {pub.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="font-mono text-[11px] text-ink-muted dark:text-ink-muted-dark"
+                        className="font-sans text-[11px] text-ink-muted dark:text-ink-muted-dark"
                       >
                         #{tag}
                       </span>

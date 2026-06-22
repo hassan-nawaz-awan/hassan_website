@@ -20,7 +20,7 @@ export default function Skills() {
               viewport={{ once: true, margin: '-60px' }}
               transition={{ duration: 0.5, delay: i * 0.07 }}
             >
-              <h3 className="font-mono text-xs uppercase tracking-[0.14em] text-ink-muted dark:text-ink-muted-dark">
+              <h3 className="font-sans text-xs uppercase tracking-[0.14em] text-ink-muted dark:text-ink-muted-dark">
                 {group.category}
               </h3>
               <div className="mt-4 flex flex-wrap gap-2">

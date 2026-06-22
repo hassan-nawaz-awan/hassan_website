@@ -48,7 +48,7 @@ export default function News() {
 
                 <div>
                   <div className="flex flex-wrap items-center gap-3">
-                    <span className="font-mono text-xs text-ink-muted dark:text-ink-muted-dark">
+                    <span className="font-sans text-xs text-ink-muted dark:text-ink-muted-dark">
                       {item.date}
                     </span>
                     <span className="pill">{item.tag}</span>

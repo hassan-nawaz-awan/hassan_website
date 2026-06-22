@@ -44,7 +44,7 @@ export default function Conferences() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
                   transition={{ duration: 0.45, delay: i * 0.06 }}
-                  className="group overflow-hidden rounded-2xl border border-hairline bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-hairline-dark dark:bg-surface-dark"
+                  className="group overflow-hidden rounded-sm border border-hairline bg-surface shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-hairline-dark dark:bg-surface-dark"
                 >
                   {featuredImage && (
                     <button
@@ -61,18 +61,18 @@ export default function Conferences() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/78 via-black/18 to-black/5" />
                       <div className="absolute inset-x-0 top-0 flex items-center justify-between p-4">
-                        <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+                        <span className="rounded-sm border border-white/15 bg-white/10 px-3 py-1 font-sans text-[10px] uppercase tracking-[0.2em] text-white backdrop-blur-sm">
                           {conf.year}
                         </span>
                         {images.length > 0 && (
-                          <span className="rounded-full border border-white/15 bg-white/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+                          <span className="rounded-sm border border-white/15 bg-white/10 px-3 py-1 font-sans text-[10px] uppercase tracking-[0.2em] text-white backdrop-blur-sm">
                             {images.length} photos
                           </span>
                         )}
                       </div>
                       <div className="absolute inset-x-0 bottom-0 p-5">
-                        <div className="max-w-xs rounded-2xl border border-white/10 bg-white/5 p-3 backdrop-blur-sm">
-                          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/80">
+                        <div className="max-w-xs rounded-sm border border-white/10 bg-white/5 p-3 backdrop-blur-sm">
+                          <p className="font-sans text-[10px] uppercase tracking-[0.22em] text-white/80">
                             Featured event
                           </p>
                           <p className="mt-1 text-sm font-medium text-white">
@@ -87,22 +87,22 @@ export default function Conferences() {
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="pill">{conf.role}</span>
                       {conf.location && (
-                        <span className="font-mono text-[11px] uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark">
+                        <span className="font-sans text-[11px] uppercase tracking-wide text-ink-muted dark:text-ink-muted-dark">
                           {conf.location}
                         </span>
                       )}
                     </div>
                     <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-ink-muted dark:text-ink-muted-dark">
-                      <span className="inline-flex items-center gap-2 rounded-full border border-hairline px-3 py-1 text-xs uppercase tracking-[0.2em] dark:border-hairline-dark">
+                      <span className="inline-flex items-center gap-2 rounded-sm border border-hairline px-3 py-1 text-xs uppercase tracking-[0.2em] dark:border-hairline-dark">
                         <MapPin size={12} />
                         {conf.location}
                       </span>
-                      <span className="inline-flex items-center gap-2 rounded-full border border-hairline px-3 py-1 text-xs uppercase tracking-[0.2em] dark:border-hairline-dark">
+                      <span className="inline-flex items-center gap-2 rounded-sm border border-hairline px-3 py-1 text-xs uppercase tracking-[0.2em] dark:border-hairline-dark">
                         <Video size={12} />
                         {conf.role}
                       </span>
                       {images.length > 0 && (
-                        <span className="inline-flex items-center gap-2 rounded-full border border-hairline px-3 py-1 text-xs uppercase tracking-[0.2em] dark:border-hairline-dark">
+                        <span className="inline-flex items-center gap-2 rounded-sm border border-hairline px-3 py-1 text-xs uppercase tracking-[0.2em] dark:border-hairline-dark">
                           <Camera size={12} />
                           {images.length} photos
                         </span>
@@ -122,7 +122,7 @@ export default function Conferences() {
                             key={img.src}
                             type="button"
                             onClick={() => openGallery(images, idx)}
-                            className="aspect-square overflow-hidden rounded-xl border border-hairline transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg dark:border-hairline-dark"
+                            className="aspect-square overflow-hidden rounded-sm border border-hairline transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-lg dark:border-hairline-dark"
                             aria-label={`Open photo: ${img.caption || conf.name}`}
                           >
                             {/* eslint-disable-next-line @next/next/no-img-element */}
