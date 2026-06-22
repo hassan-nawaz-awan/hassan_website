@@ -12,7 +12,7 @@ export default function About() {
           <span className="eyebrow">01 — About</span>
         </div>
 
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <motion.h2
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -30,7 +30,7 @@ export default function About() {
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.5 }}
             >
-              <div className="aspect-[4/5] w-full max-w-[200px] overflow-hidden rounded-md border border-hairline dark:border-hairline-dark">
+              <div className="aspect-[4/5] w-full max-w-[220px] overflow-hidden rounded-2xl border border-hairline bg-surface shadow-sm dark:border-hairline-dark dark:bg-surface-dark">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={withBasePath(profile.photo)}
@@ -40,7 +40,7 @@ export default function About() {
               </div>
             </motion.div>
 
-            <div className="space-y-5 text-[17px] leading-relaxed text-ink-muted dark:text-ink-muted-dark">
+            <div className="space-y-5 text-[17px] leading-7 text-ink-muted dark:text-ink-muted-dark">
               {profile.about.paragraphs.map((p, i) => (
                 <motion.p
                   key={i}
@@ -60,9 +60,9 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-10 border-l-2 border-accent dark:border-accent-dark pl-5"
+            className="mt-10 rounded-r-xl border-l-2 border-accent bg-accent/5 py-4 pl-5 pr-4 dark:border-accent-dark dark:bg-accent-dark/5"
           >
-            <p className="font-display italic text-lg text-ink dark:text-ink-dark">
+            <p className="font-display text-lg italic text-ink dark:text-ink-dark">
               &ldquo;{profile.careerGoal}&rdquo;
             </p>
           </motion.div>

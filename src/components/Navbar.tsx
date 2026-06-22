@@ -11,21 +11,21 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-hairline bg-canvas/85 backdrop-blur-md dark:border-hairline-dark dark:bg-canvas-dark/85">
+    <header className="sticky top-0 z-50 border-b border-hairline bg-canvas/80 backdrop-blur-xl dark:border-hairline-dark dark:bg-canvas-dark/80">
       <nav className="container-content flex h-16 items-center justify-between">
         <Link
           href="/"
-          className="font-display text-lg italic text-ink dark:text-ink-dark"
+          className="font-display text-lg italic tracking-wide text-ink dark:text-ink-dark"
         >
           {profile.name}
         </Link>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-7 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="link-underline text-sm"
+              className="link-underline text-sm tracking-wide"
             >
               {item.label}
             </Link>
@@ -39,7 +39,7 @@ export default function Navbar() {
             type="button"
             aria-label={open ? 'Close menu' : 'Open menu'}
             onClick={() => setOpen((v) => !v)}
-            className="flex h-9 w-9 items-center justify-center rounded-sm border border-hairline dark:border-hairline-dark"
+            className="flex h-9 w-9 items-center justify-center rounded-md border border-hairline bg-surface dark:border-hairline-dark dark:bg-surface-dark"
           >
             {open ? <X size={16} /> : <Menu size={16} />}
           </button>

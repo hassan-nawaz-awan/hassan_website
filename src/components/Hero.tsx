@@ -61,7 +61,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           custom={1}
-          className="max-w-3xl font-display text-5xl leading-[1.05] text-ink dark:text-ink-dark sm:text-6xl lg:text-7xl"
+          className="max-w-3xl font-display text-5xl leading-[1.02] text-ink dark:text-ink-dark sm:text-6xl lg:text-7xl"
         >
           {profile.name}
         </motion.h1>
@@ -71,7 +71,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           custom={2}
-          className="mt-6 max-w-xl font-display text-xl italic text-ink-muted dark:text-ink-muted-dark sm:text-2xl"
+          className="mt-6 max-w-2xl font-display text-xl italic leading-relaxed text-ink-muted dark:text-ink-muted-dark sm:text-2xl"
         >
           {profile.tagline}
         </motion.p>
@@ -81,7 +81,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           custom={3}
-          className="mt-4 max-w-2xl font-mono text-sm text-ink-muted dark:text-ink-muted-dark"
+          className="mt-4 max-w-2xl font-mono text-sm leading-6 text-ink-muted dark:text-ink-muted-dark"
         >
           {profile.shortFocus}
         </motion.p>
@@ -91,7 +91,7 @@ export default function Hero() {
           initial="hidden"
           animate="show"
           custom={3.4}
-          className="mt-2 max-w-2xl text-sm text-ink-muted dark:text-ink-muted-dark"
+          className="mt-2 max-w-2xl text-sm leading-6 text-ink-muted dark:text-ink-muted-dark"
         >
           Incoming Ph.D. Student, {profile.futureInstitution}
         </motion.p>
@@ -146,6 +146,20 @@ export default function Hero() {
             <Mail size={16} />
             Contact
           </a>
+        </motion.div>
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          animate="show"
+          custom={5}
+          className="mt-8 flex flex-wrap gap-2"
+        >
+          {profile.researchInterests.slice(0, 4).map((interest) => (
+            <span key={interest} className="pill">
+              {interest}
+            </span>
+          ))}
         </motion.div>
       </motion.div>
 

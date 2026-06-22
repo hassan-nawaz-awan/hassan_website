@@ -14,24 +14,12 @@ const filters: { label: string; value: PubType }[] = [
   { label: 'Conference', value: 'conference' },
 ];
 
-const isPlaceholderPublication = (pub: (typeof publications)[number]) => {
-  const title = pub.title.toLowerCase();
-  const venue = pub.venue.toLowerCase();
-
-  return (
-    Boolean((pub as { isPlaceholder?: boolean }).isPlaceholder) ||
-    title.startsWith('placeholder') ||
-    venue.includes('placeholder')
-  );
-};
-
 export default function Publications() {
   const [query, setQuery] = useState('');
   const [type, setType] = useState<PubType>('all');
 
   const filtered = useMemo(() => {
     return publications
-      .filter((p) => !isPlaceholderPublication(p))
       .filter((p) => (type === 'all' ? true : p.type === type))
       .filter((p) => {
         if (!query.trim()) return true;
@@ -51,22 +39,25 @@ export default function Publications() {
 
         <div>
           <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <h2 className="section-heading">Selected publications</h2>
+            <div>
+              <h2 className="section-heading">Selected publications</h2>
+              <p className="mt-2 text-sm text-ink-muted dark:text-ink-muted-dark">
+                Representative work in machine learning, chemistry, and scientific computing.
+              </p>
+            </div>
 
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-              <div className="relative">
-                <Search
-                  size={14}
-                  className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-muted dark:text-ink-muted-dark"
-                />
-                <input
-                  type="text"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Search publications…"
-                  className="w-full rounded-sm border border-hairline bg-surface py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-muted focus:border-accent dark:border-hairline-dark dark:bg-surface-dark dark:text-ink-dark dark:placeholder:text-ink-muted-dark sm:w-56"
-                />
-              </div>
+            <div className="relative">
+              <Search
+                size={14}
+                className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-ink-muted dark:text-ink-muted-dark"
+              />
+              <input
+                type="text"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                placeholder="Search publications…"
+                className="w-full rounded-full border border-hairline bg-surface py-2 pl-9 pr-3 text-sm text-ink placeholder:text-ink-muted focus:border-accent dark:border-hairline-dark dark:bg-surface-dark dark:text-ink-dark dark:placeholder:text-ink-muted-dark sm:w-64"
+              />
             </div>
           </div>
 
@@ -91,7 +82,7 @@ export default function Publications() {
               No publications match that search yet.
             </p>
           ) : (
-            <ul className="divide-y divide-hairline dark:divide-hairline-dark">
+            <ul className="space-y-4">
               {filtered.map((pub, i) => (
                 <motion.li
                   key={pub.id}
@@ -99,24 +90,26 @@ export default function Publications() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-40px' }}
                   transition={{ duration: 0.4, delay: Math.min(i, 6) * 0.05 }}
-                  className="py-6"
+                  className="rounded-2xl border border-hairline bg-surface p-6 shadow-sm transition-shadow duration-300 hover:shadow-md dark:border-hairline-dark dark:bg-surface-dark"
                 >
-                  <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-                    <h3 className="font-display text-lg text-ink dark:text-ink-dark">
-                      {pub.title}
-                    </h3>
+                  <div className="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
+                    <div>
+                      <h3 className="font-display text-lg text-ink dark:text-ink-dark">
+                        {pub.title}
+                      </h3>
+                      <p className="mt-1.5 text-sm text-ink-muted dark:text-ink-muted-dark">
+                        {pub.authors.join(', ')}
+                      </p>
+                    </div>
                     <span className="font-mono text-xs text-ink-muted dark:text-ink-muted-dark">
                       {pub.year}
                     </span>
                   </div>
-                  <p className="mt-1.5 text-sm text-ink-muted dark:text-ink-muted-dark">
-                    {pub.authors.join(', ')}
-                  </p>
-                  <p className="mt-1 text-sm italic text-ink-muted dark:text-ink-muted-dark">
+                  <p className="mt-2 text-sm italic text-ink-muted dark:text-ink-muted-dark">
                     {pub.venue}
                   </p>
 
-                  <div className="mt-3 flex flex-wrap items-center gap-2">
+                  <div className="mt-4 flex flex-wrap items-center gap-2">
                     <span className="pill">{pub.type}</span>
                     {pub.tags.map((tag) => (
                       <span
@@ -128,7 +121,7 @@ export default function Publications() {
                     ))}
                   </div>
 
-                  <div className="mt-3 flex gap-4">
+                  <div className="mt-4 flex gap-4">
                     {pub.doi && (
                       <a
                         href={`https://doi.org/${pub.doi}`}

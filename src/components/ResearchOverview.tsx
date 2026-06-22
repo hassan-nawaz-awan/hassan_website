@@ -25,7 +25,7 @@ export default function ResearchOverview() {
             chemistry?
           </h2>
 
-          <div className="grid gap-px overflow-hidden rounded-md border border-hairline bg-hairline dark:border-hairline-dark dark:bg-hairline-dark sm:grid-cols-2">
+          <div className="grid gap-px overflow-hidden rounded-2xl border border-hairline bg-hairline dark:border-hairline-dark dark:bg-hairline-dark sm:grid-cols-2">
             {researchAreas.map((area, i) => {
               const Icon = iconMap[area.icon] ?? Atom;
               return (
@@ -35,7 +35,7 @@ export default function ResearchOverview() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-60px' }}
                   transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className="group bg-surface p-8 transition-colors hover:bg-canvas dark:bg-surface-dark dark:hover:bg-canvas-dark"
+                  className="group bg-surface p-8 transition-all duration-300 hover:-translate-y-0.5 hover:bg-canvas dark:bg-surface-dark dark:hover:bg-canvas-dark"
                 >
                   <Icon
                     size={22}
