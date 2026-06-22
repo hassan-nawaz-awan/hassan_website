@@ -27,8 +27,7 @@
     "location": "Atlanta, Georgia, USA (Didn't travel because travel restrictions",
     "year": "22-26 March 2026",
     "role": "Poster Presenter",
-    "description": "Poster title: How Well AI Agents Perform as Expert Computational Chemists? Case Studies with Aitomia",
-    "images": []
+    "description": "Poster title: How Well AI Agents Perform as Expert Computational Chemists? Case Studies with Aitomia"
   },
   {
     "id": "conf-3",
@@ -37,7 +36,20 @@
     "year": "November 2025",
     "role": "Poster Presenter",
     "description": "Poster title: How Well AI Agents Perform as Expert Computational Chemists? Case Studies with Aitomia",
-    "images": []
+    "images": [
+      {
+        "src": "/images/conferences/conf-1-placeholder-1.svg",
+        "caption": "Placeholder photo for ICCOC2025."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-2.svg",
+        "caption": "Placeholder photo for ICCOC2025."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-3.svg",
+        "caption": "Placeholder photo for ICCOC2025."
+      }
+    ]
   },
   {
     "id": "conf-4",
@@ -46,7 +58,20 @@
     "year": "November 2025",
     "role": "Poster Presenter",
     "description": "Poster title: Aitomia: Your Intelligent Assistant for Atomistic Simulations",
-    "images": []
+    "images": [
+      {
+        "src": "/images/conferences/conf-1-placeholder-1.svg",
+        "caption": "Placeholder photo for ES-AIM 2024."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-2.svg",
+        "caption": "Placeholder photo for ES-AIM 2024."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-3.svg",
+        "caption": "Placeholder photo for ES-AIM 2024."
+      }
+    ]
   },
   {
     "id": "conf-5",
@@ -55,7 +80,20 @@
     "year": "7-11 September 2025",
     "role": "Poster Presenter",
     "description": "Poster title: Aitomia: Your Intelligent Assistant for Atomistic Simulations",
-    "images": []
+    "images": [
+      {
+        "src": "/images/conferences/conf-1-placeholder-1.svg",
+        "caption": "Placeholder photo for MDMM 2025."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-2.svg",
+        "caption": "Placeholder photo for MDMM 2025."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-3.svg",
+        "caption": "Placeholder photo for MDMM 2025."
+      }
+    ]
   },
   {
     "id": "conf-6",
@@ -64,7 +102,20 @@
     "year": 2023,
     "role": "Speaker",
     "description": "Placeholder entry — replace with your real conference details.",
-    "images": []
+    "images": [
+      {
+        "src": "/images/conferences/conf-1-placeholder-1.svg",
+        "caption": "Placeholder photo for Placeholder Conference 6."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-2.svg",
+        "caption": "Placeholder photo for Placeholder Conference 6."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-3.svg",
+        "caption": "Placeholder photo for Placeholder Conference 6."
+      }
+    ]
   },
   {
     "id": "conf-7",
@@ -73,7 +124,20 @@
     "year": 2022,
     "role": "Panelist",
     "description": "Placeholder entry — replace with your real conference details.",
-    "images": []
+    "images": [
+      {
+        "src": "/images/conferences/conf-1-placeholder-1.svg",
+        "caption": "Placeholder photo for Placeholder Conference 7."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-2.svg",
+        "caption": "Placeholder photo for Placeholder Conference 7."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-3.svg",
+        "caption": "Placeholder photo for Placeholder Conference 7."
+      }
+    ]
   },
   {
     "id": "conf-8",
@@ -82,7 +146,20 @@
     "year": 2022,
     "role": "Organizer",
     "description": "Placeholder entry — replace with your real conference details.",
-    "images": []
+    "images": [
+      {
+        "src": "/images/conferences/conf-1-placeholder-1.svg",
+        "caption": "Placeholder photo for Placeholder Conference 8."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-2.svg",
+        "caption": "Placeholder photo for Placeholder Conference 8."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-3.svg",
+        "caption": "Placeholder photo for Placeholder Conference 8."
+      }
+    ]
   },
   {
     "id": "conf-9",
@@ -91,7 +168,20 @@
     "year": 2021,
     "role": "Presenter",
     "description": "Placeholder entry — replace with your real conference details.",
-    "images": []
+    "images": [
+      {
+        "src": "/images/conferences/conf-1-placeholder-1.svg",
+        "caption": "Placeholder photo for Placeholder Conference 9."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-2.svg",
+        "caption": "Placeholder photo for Placeholder Conference 9."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-3.svg",
+        "caption": "Placeholder photo for Placeholder Conference 9."
+      }
+    ]
   },
   {
     "id": "conf-10",
@@ -100,7 +190,20 @@
     "year": 2021,
     "role": "Attendee",
     "description": "Placeholder entry — replace with your real conference details.",
-    "images": []
+    "images": [
+      {
+        "src": "/images/conferences/conf-1-placeholder-1.svg",
+        "caption": "Placeholder photo for Placeholder Conference 10."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-2.svg",
+        "caption": "Placeholder photo for Placeholder Conference 10."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-3.svg",
+        "caption": "Placeholder photo for Placeholder Conference 10."
+      }
+    ]
   },
   {
     "id": "conf-11",
@@ -109,7 +212,20 @@
     "year": 2020,
     "role": "Volunteer",
     "description": "Placeholder entry — replace with your real conference details.",
-    "images": []
+    "images": [
+      {
+        "src": "/images/conferences/conf-1-placeholder-1.svg",
+        "caption": "Placeholder photo for Placeholder Conference 11."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-2.svg",
+        "caption": "Placeholder photo for Placeholder Conference 11."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-3.svg",
+        "caption": "Placeholder photo for Placeholder Conference 11."
+      }
+    ]
   },
   {
     "id": "conf-12",
@@ -118,6 +234,19 @@
     "year": 2020,
     "role": "Presenter",
     "description": "Placeholder entry — replace with your real conference details.",
-    "images": []
+    "images": [
+      {
+        "src": "/images/conferences/conf-1-placeholder-1.svg",
+        "caption": "Placeholder photo for Placeholder Conference 12."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-2.svg",
+        "caption": "Placeholder photo for Placeholder Conference 12."
+      },
+      {
+        "src": "/images/conferences/conf-1-placeholder-3.svg",
+        "caption": "Placeholder photo for Placeholder Conference 12."
+      }
+    ]
   }
 ]
