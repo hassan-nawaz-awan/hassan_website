@@ -10,40 +10,41 @@ const config: Config = {
     extend: {
       colors: {
         canvas: {
-          DEFAULT: '#F6F1E7',
-          dark: '#0A0D13',
+          DEFAULT: '#F7F9FC',
+          dark: '#070A12',
         },
         surface: {
           DEFAULT: '#FFFFFF',
-          dark: '#12161F',
+          dark: '#0D1422',
         },
         ink: {
-          DEFAULT: '#1B1B18',
-          muted: '#5C5747',
-          dark: '#F2EEE3',
-          'muted-dark': '#AFA999',
+          DEFAULT: '#0D1B2E',
+          muted: '#4A607A',
+          dark: '#D9E6F5',
+          'muted-dark': '#7A99BA',
         },
         hairline: {
-          DEFAULT: '#D8CFB8',
-          dark: '#2A2F3D',
+          DEFAULT: '#D4E0EF',
+          dark: '#1B2B42',
         },
         accent: {
-          DEFAULT: '#7A2230',
-          light: '#9C2E3F',
-          dark: '#E2A4AC',
+          DEFAULT: '#1C4A96',
+          light: '#2563D0',
+          dark: '#7EB8FF',
         },
         ember: {
-          DEFAULT: '#8A6A2A',
-          dark: '#D9B36C',
+          DEFAULT: '#9B7520',
+          dark: '#F0C54A',
         },
         masthead: {
-          DEFAULT: '#0A0D13',
-          ink: '#F2EEE3',
-          line: '#3A3F4D',
+          DEFAULT: '#060910',
+          ink: '#DCE8F8',
+          line: '#172035',
         },
       },
       boxShadow: {
-        card: '0 12px 32px rgba(20, 16, 8, 0.06)',
+        card: '0 8px 28px rgba(12, 26, 54, 0.07)',
+        glow: '0 0 40px rgba(28, 74, 150, 0.18)',
       },
       fontFamily: {
         display: ['var(--font-display)', 'Georgia', 'serif'],
@@ -63,14 +64,15 @@ const config: Config = {
           '0%': { opacity: '0', transform: 'translateY(12px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        countUp: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
+        pulse_glow: {
+          '0%, 100%': { opacity: '0.06' },
+          '50%': { opacity: '0.14' },
         },
       },
       animation: {
         drift: 'drift 18s ease-in-out infinite',
         fadeUp: 'fadeUp 0.6s ease-out forwards',
+        pulse_glow: 'pulse_glow 4s ease-in-out infinite',
       },
       typography: () => ({
         DEFAULT: {

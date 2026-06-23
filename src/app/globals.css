@@ -20,34 +20,26 @@
 
   body {
     @apply min-h-screen bg-canvas text-ink antialiased dark:bg-canvas-dark dark:text-ink-dark;
-    background-image:
-      repeating-linear-gradient(
-        to bottom,
-        rgba(27, 27, 24, 0.018) 0px,
-        rgba(27, 27, 24, 0.018) 1px,
-        transparent 1px,
-        transparent 3px
-      ),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(246, 241, 231, 0.6));
+    background-image: radial-gradient(
+      ellipse 80% 60% at 50% -10%,
+      rgba(28, 74, 150, 0.045) 0%,
+      transparent 70%
+    );
     background-attachment: fixed;
     font-feature-settings: 'cv11', 'ss01';
     text-rendering: optimizeLegibility;
   }
 
   .dark body {
-    background-image:
-      repeating-linear-gradient(
-        to bottom,
-        rgba(242, 238, 227, 0.012) 0px,
-        rgba(242, 238, 227, 0.012) 1px,
-        transparent 1px,
-        transparent 3px
-      ),
-      linear-gradient(to bottom, rgba(10, 13, 19, 0.4), rgba(10, 13, 19, 0.7));
+    background-image: radial-gradient(
+      ellipse 80% 55% at 50% -5%,
+      rgba(28, 74, 150, 0.12) 0%,
+      transparent 65%
+    );
   }
 
   ::selection {
-    @apply bg-accent/25 text-ink dark:text-ink-dark;
+    @apply bg-accent/20 text-ink dark:text-ink-dark;
   }
 
   :focus-visible {
@@ -69,9 +61,9 @@
 }
 
 @layer components {
-  /* Journal-style running head: thin tracked small caps, no monospace */
+  /* Section eyebrow — sapphire small-caps label */
   .eyebrow {
-    @apply font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-accent dark:text-accent-dark;
+    @apply font-sans text-[11px] font-semibold uppercase tracking-[0.24em] text-accent dark:text-accent-dark;
   }
 
   .section-heading {
@@ -82,7 +74,7 @@
     @apply border-t border-hairline dark:border-hairline-dark;
   }
 
-  /* Journal masthead double rule */
+  /* Double rule separator */
   .rule-double {
     @apply border-t border-hairline dark:border-hairline-dark;
     border-bottom: 1px solid theme('colors.hairline.DEFAULT');
@@ -100,16 +92,17 @@
     @apply rounded-sm border border-hairline dark:border-hairline-dark bg-surface dark:bg-surface-dark shadow-card transition-all duration-300;
   }
 
+  /* Pill badge — blue-tinted, sophisticated */
   .pill {
-    @apply inline-flex items-center rounded-sm border border-hairline bg-surface/90 px-2.5 py-1 font-sans text-[11px] font-medium uppercase tracking-[0.14em] text-ink-muted dark:border-hairline-dark dark:bg-surface-dark/85 dark:text-ink-muted-dark;
+    @apply inline-flex items-center rounded-sm border border-accent/20 bg-accent/6 px-2.5 py-1 font-sans text-[11px] font-medium uppercase tracking-[0.14em] text-accent dark:border-accent-dark/25 dark:bg-accent-dark/10 dark:text-accent-dark;
   }
 
   .btn-primary {
-    @apply inline-flex items-center gap-2 rounded-sm bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-canvas shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-light hover:shadow-md dark:text-masthead-ink;
+    @apply inline-flex items-center gap-2 rounded-sm bg-accent px-6 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent-light hover:shadow-glow dark:bg-accent-dark dark:text-masthead;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 rounded-sm border border-ink/70 bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-ink shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent dark:border-ink-dark/60 dark:text-ink-dark dark:hover:border-accent-dark dark:hover:text-accent-dark;
+    @apply inline-flex items-center gap-2 rounded-sm border border-ink/60 bg-transparent px-6 py-3 text-sm font-semibold uppercase tracking-[0.08em] text-ink shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-accent hover:text-accent dark:border-ink-dark/50 dark:text-ink-dark dark:hover:border-accent-dark dark:hover:text-accent-dark;
   }
 
   .link-underline {
@@ -135,9 +128,9 @@
     opacity: 1;
   }
 
-  /* Drop cap for the opening paragraph of editorial copy */
+  /* Drop cap for editorial bio opening */
   .drop-cap::first-letter {
-    @apply font-display text-ink dark:text-ink-dark;
+    @apply font-display text-accent dark:text-accent-dark;
     float: left;
     font-size: 3.6em;
     line-height: 0.85;
@@ -170,16 +163,16 @@
   }
 }
 
-/* Custom scrollbar, kept quiet and academic */
+/* Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
   background-color: theme('colors.hairline.DEFAULT');
-  border-radius: 999px;
+  border-radius: 2px;
 }
 .dark ::-webkit-scrollbar-thumb {
   background-color: theme('colors.hairline.dark');

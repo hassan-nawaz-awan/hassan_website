@@ -21,7 +21,7 @@ export default function MolecularBackground({
     >
       <svg
         viewBox="0 0 1200 800"
-        className="absolute -right-[10%] top-0 h-full w-[80%] opacity-[0.55] dark:opacity-[0.35]"
+        className="absolute -right-[10%] top-0 h-full w-[80%] opacity-[0.50] dark:opacity-[0.30]"
         preserveAspectRatio="xMidYMid slice"
       >
         <defs>
@@ -41,7 +41,7 @@ export default function MolecularBackground({
           stroke="currentColor"
           fill="none"
         >
-          {/* Basin 1 contours (left minimum) */}
+          {/* Basin 1 contours */}
           <g className={basin1} strokeWidth="1.1">
             <path d="M260,180 C160,210 120,300 150,380 C180,460 280,500 380,470 C480,440 520,340 480,260 C440,180 360,150 260,180 Z" opacity="0.9" />
             <path d="M270,210 C190,235 160,310 185,375 C210,440 290,470 370,445 C450,420 480,335 450,270 C420,205 350,185 270,210 Z" opacity="0.7" />
@@ -50,7 +50,7 @@ export default function MolecularBackground({
             <circle cx="320" cy="325" r="3.5" fill="currentColor" stroke="none" opacity="0.9" />
           </g>
 
-          {/* Basin 2 contours (right, deeper minimum — global) */}
+          {/* Basin 2 contours */}
           <g className={basin2} strokeWidth="1.1">
             <path d="M780,420 C660,440 600,540 640,630 C680,720 800,750 900,710 C1000,670 1030,560 980,470 C930,380 900,400 780,420 Z" opacity="0.85" />
             <path d="M790,450 C690,468 645,550 675,625 C705,700 800,725 880,695 C960,665 985,575 945,500 C905,425 890,432 790,450 Z" opacity="0.65" />
@@ -59,7 +59,7 @@ export default function MolecularBackground({
             <circle cx="800" cy="565" r="4.5" fill="currentColor" stroke="none" opacity="0.95" />
           </g>
 
-          {/* Saddle / transition path linking the two minima */}
+          {/* Saddle path */}
           <path
             d="M340,330 C440,350 560,420 620,470 C680,520 740,545 790,560"
             stroke="currentColor"
@@ -70,7 +70,7 @@ export default function MolecularBackground({
             fill="none"
           />
 
-          {/* Faint outer contour field */}
+          {/* Outer contour field */}
           <g className={faint} strokeWidth="0.6" opacity="0.35">
             <path d="M160,120 C40,180 -20,320 40,440 C100,560 240,620 380,580 C520,540 600,420 560,300 C520,180 420,120 280,120 C240,120 200,110 160,120 Z" />
             <path d="M740,340 C600,380 540,520 600,640 C660,760 820,800 940,750 C1060,700 1110,560 1050,440 C990,320 880,300 740,340 Z" />
